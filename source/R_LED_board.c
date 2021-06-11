@@ -103,12 +103,7 @@ const uint8_t	option_byte_pointer[] = {  _Liquid_high_temp_stop,_Liquid_low_temp
 
 
 int8_t	option_modify_flag,option_byte_count_value;
-
-int16_t	voltage_value_1,voltage_value,voltage_offset;
-
-int16_t voltage_buffer[32],voltage_buffer_1[32];
-int8_t	voltage_buffer_pointer_1=0,voltage_buffer_pointer=0,voltage_loop_count,voltage_count;
-	
+int16_t	voltage_value_1;
 int8_t	th_no=1;	
 uint8_t	led_scan_line=0,led_data_shift,check_b7,clk_delay,LED_mode_count,key_press_check_time = 0,key_repeart_timer,key_repeart_timer_1;
 uint8_t	production_key_press_check_time = 0;
@@ -117,17 +112,13 @@ uint8_t	LED_1_dot,LED_2_dot,LED_3_dot,LED_4_dot,LED_RUN,LED_ALARM,LED_PV,LED_SV;
 uint16_t	key_data,key_press_status,flash_count_buf,flash_flag,key_debunse;
 uint8_t	digi_0,digi_1,digi_2,key_debunse_count;
 int16_t	th_display,disp_temp_buf;        //No_error_display_count;
-//int16_t	filter_sec_count,filter_10hour_count,filter_one_sec_count;
 int8_t	error_code_pointer, error_code_last, error_code_offset,loop_temp;
 int8_t	production_mode,Production_mode_count,relay_test_timer;
 uint8_t	adjust_addr_key,option_byte_count,check_key_1,check_key_2;
 uint8_t	liquid_temp_buf;
 uint16_t	LED_display_timer;
-//uint8_t	Modbus_address=03;
 extern	uint16_t	get_V_A_timer;
-extern	int16_t 	PID_temp;
 /***********************************************************************************************************************/
-
 void 	LED_mode_display(void);
 void 	get_production_key_press(void);
 void 	production_process(void);
@@ -159,17 +150,10 @@ void LED_key_down_operation(void)
 			break;
 		/*************************************************************************/ 
 		case _LED_mode_2:
-			
-#if 1
+
 			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
 			{
-#if 0			
-				SET_TEMP = SET_TEMP - 10;
-				SET_TEMP = SET_TEMP/10;
-				SET_TEMP = SET_TEMP*10;
-#else
 				SET_TEMP--;
-#endif
 				if(SET_TEMP > eeprom_option_byte[_Set_temp_high] * 10)
 					SET_TEMP = eeprom_option_byte[_Set_temp_high] *10;
 				else if(SET_TEMP < eeprom_option_byte[_Set_temp_low] *10)
@@ -185,7 +169,7 @@ void LED_key_down_operation(void)
 					SET_TEMP = eeprom_option_byte[_Set_temp_low_1];
 				/*************************************/ 	
 			}
-#endif		
+
 			flash_flag = 1;
 			flash_count_buf = 0;
 			LED_mode_display();
@@ -193,18 +177,8 @@ void LED_key_down_operation(void)
 		/*************************************************************************/ 
 		case _LED_mode_4:
 			
-			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
-			{
-				if(th_no==3)
-					th_no=2;
-				if(--th_no < 1)
-					th_no=5;
-			}
-			else
-			{
-				if(--th_no < 1)
-					th_no=5;
-			}
+			if(--th_no < 1)
+				th_no=3;
 			flash_flag = 0;
 			flash_count_buf = 0;
 			LED_mode_display();
@@ -218,14 +192,7 @@ void LED_key_down_operation(void)
 			flash_count_buf = 0;
 			LED_mode_display();
 			break;
-#if 0				
-		/*************************************************************************/ 
-		case _LED_mode_8:
-			break;
-		/*************************************************************************/ 
-		case _LED_mode_9:
-			break;
-#endif			
+#if 0
 		/*************************************************************************/ 
 		case _LED_mode_6:
 			eeprom_option_byte[_Control_sensor_offset]--; 
@@ -250,18 +217,8 @@ void LED_key_down_operation(void)
 			LED_mode_display();
 			option_backup = 0xFF;
 			break;
-#if 1		
 		/*************************************************************************/ 
-		case _LED_mode_9:
-			if(Modbus_address == Modbus_address_min)
-				Modbus_address=Modbus_address_max;
-			else
-				Modbus_address--;
-			LED_mode_display();
-			key_repeart_timer = 70;
-			break;
-#endif									
-		/*************************************************************************/ 
+#endif
 		case _LED_mode_option:
 
 			option_backup = 0xFF;
@@ -331,16 +288,10 @@ void LED_key_up_operation(void)
 		/*************************************************************************/ 
 		case _LED_mode_2:
 			
-#if 1
+
 			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
 			{
-#if 0			
-				SET_TEMP = SET_TEMP + 10;
-				SET_TEMP = SET_TEMP/10;
-				SET_TEMP = SET_TEMP*10;
-#else
 				SET_TEMP++;
-#endif				
 				if(SET_TEMP > eeprom_option_byte[_Set_temp_high] * 10)
 					SET_TEMP = eeprom_option_byte[_Set_temp_high] *10;
 				else if(SET_TEMP < eeprom_option_byte[_Set_temp_low] *10)
@@ -356,31 +307,19 @@ void LED_key_up_operation(void)
 					SET_TEMP = eeprom_option_byte[_Set_temp_low_1];
 				/*************************************/ 	
 			}
-#endif		
+
 			flash_flag = 1;
 			flash_count_buf = 0;
 			LED_mode_display();
 			break;
 		/*************************************************************************/ 
 		case _LED_mode_4:
-			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
-			{
-				if(th_no==1)
-					th_no=2;
-				if(++th_no > 5)
-					th_no=1;
-			}
-			else
-			{
-				if(++th_no > 5)
-					th_no=1;
-			}
-
+			if(++th_no > 3)
+				th_no=1;
 			flash_flag = 0;
 			flash_count_buf = 0;
 			LED_mode_display();
 			break;
-			
 		/*************************************************************************/ 
 		case _LED_mode_5:
 			if(--error_code_offset <= 0 )
@@ -390,13 +329,6 @@ void LED_key_up_operation(void)
 			LED_mode_display();
 			break;
 #if 0			
-		/*************************************************************************/ 
-		case _LED_mode_8:
-			break;
-		/*************************************************************************/ 
-		case _LED_mode_9:
-			break;
-#endif		
 		/*************************************************************************/ 
 		case _LED_mode_6:
 			eeprom_option_byte[_Control_sensor_offset]++; 
@@ -421,17 +353,7 @@ void LED_key_up_operation(void)
 			LED_mode_display();
 			option_backup = 0xFF;
 			break;
-#if 1		
-		/*************************************************************************/ 
-		case _LED_mode_9:
-			if(Modbus_address == Modbus_address_max)
-				Modbus_address=Modbus_address_min;
-			else
-				Modbus_address++;
-			LED_mode_display();
-			key_repeart_timer = 70;
-			break;
-#endif													
+#endif			
 		/*************************************************************************/ 
 		case _LED_mode_option:
 			option_backup = 0xFF;
@@ -455,13 +377,6 @@ void LED_key_up_operation(void)
 		/*************************************************************************/ 
 			LED_mode_display();
 			break;
-
-
-
-
-
-
-		
 		/*************************************************************************/ 
 		case _LED_key_check:
 			if(++check_key_2 > 99)
@@ -470,14 +385,8 @@ void LED_key_up_operation(void)
 			break;
 		/*************************************************************************/ 
 
-
 		default:
 			break;
-
-
-
-
-
 
 	}
 
@@ -493,17 +402,6 @@ void LED_key_up_operation(void)
 ***********************************************************************************************************************/
 void get_key_press(void)
 {
-#if 0
-	do
-	{
-		convert_AD_channel();
-	}
-	while(adc_conv_end == RESET);
-
-	
-	key_data = T_DECP[_AD_key] ;
-
-#endif
 
 	if(key_data > 900)
 	{
@@ -575,16 +473,8 @@ void get_key_press(void)
 						{
 							if(current_sys_op_power == SET)  
 							{
-								if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
-								{
-									if(LED_mode_count++ >= _LED_mode_6)
-										LED_mode_count = _LED_mode_1;
-								}
-								else
-								{
-									if(LED_mode_count++ >= _LED_mode_7)
-										LED_mode_count = _LED_mode_1;
-								}	
+								if(LED_mode_count++ >= _LED_mode_5)
+									LED_mode_count = _LED_mode_2;
 							}
 							else
 							{
@@ -594,17 +484,6 @@ void get_key_press(void)
 										option_byte_count=option_byte_count_min;
 									else
 										option_byte_count++;
-
-#if 0								
-									if(option_modify_flag == 0)
-									{
-										option_modify_flag = 1;
-									}	
-									else
-									{
-										option_modify_flag = 0;
-									}	
-#endif									
 								}
 								else 	if(LED_mode_count == _LED_key_check)
 										{
@@ -636,7 +515,6 @@ void get_key_press(void)
 							flash_flag = 0;
 							flash_count_buf = 0;
 							LED_mode_display();
-						//	Buzzer_flag = _Buzzer_OneSound_Bi;
 						}
 						
 						error_code_offset = 0;
@@ -711,12 +589,7 @@ void get_key_press(void)
 														}
 														error_code_backup = 0Xff;
 													}
-#if 0													
-													else
-													{
-														filter_10hour_count = 0;
-													}
-#endif													
+							
 												}
 							
 											}
@@ -773,13 +646,7 @@ void LED_temp_display(void)
 	HC164_display_arry[1] = seven_seg_code[digi_0];
 	HC164_display_arry[2] = seven_seg_code[digi_1];
 	HC164_display_arry[3] = seven_seg_code[digi_2];
-
-
-
 }
-
-
-
 /***********************************************************************************************************************
 * Function Name: LED_display
 * Description  : This function display the information on display board
@@ -829,16 +696,6 @@ void LED_mode_display(void)
 				th_display = CONTROL_TEMP + eeprom_option_byte[_Control_sensor_offset];
 				disp_temp_buf = th_display;
 				LED_temp_display();	
-#if 0				
-				if(SYSTEM_SELECT_SWITCH== RESET)	// on/off system
-				{
-					HC164_display_arry[0] = seven_seg_code[0];
-				}
-				else
-				{
-					HC164_display_arry[0] = seven_seg_code[12];
-				}
-#endif			
 				HC164_display_arry[0] = seven_seg_code[0];		// on/off system
 				LED_PV = SET;
 				LED_ALARM = RESET;
@@ -859,38 +716,7 @@ void LED_mode_display(void)
 						LED_temp_display(); 
 						LED_PV = SET;
 						HC164_display_arry[0] = seven_seg_code[0];
-#if 0						
-						if(SYSTEM_SELECT_SWITCH== RESET)	// on/off system
-						{
-							HC164_display_arry[0] = seven_seg_code[0];
-						}
-						else
-						{
-							HC164_display_arry[0] = seven_seg_code[12];
-						}
-#endif						
 					}
-#if 0					
-					// if(ERROR_CODE==0xd1 || ERROR_CODE==0xc6  || ERROR_CODE==0xd3 || ERROR_CODE==0xd4 || ERROR_CODE==0xd7 || ERROR_CODE==0xd8)
-					if(ERROR_CODE==0xd1 || ERROR_CODE==0xc6  || ERROR_CODE==0xd3 || ERROR_CODE==0xd6 || ERROR_CODE==0xd7)
-					{
-						/* ************* display control temp ***********************/
-						HC164_display_arry[0] = seven_seg_code[14];
-						
-						th_display = CONTROL_TEMP + eeprom_option_byte[_Control_sensor_offset];
-						disp_temp_buf = th_display;
-						LED_temp_display(); 
-						LED_PV = SET;
-						if(SYSTEM_SELECT_SWITCH== RESET)	// on/off system
-						{
-							HC164_display_arry[0] = seven_seg_code[0];
-						}
-						else
-						{
-							HC164_display_arry[0] = seven_seg_code[12];
-						}
-					}
-#endif					
 				}
 				else
 				{
@@ -926,31 +752,8 @@ void LED_mode_display(void)
 		case _LED_mode_2:		// display set temp and adjust
 		
 			LED_SV = SET;
-			
-#if 0
-			if(flash_flag==1)
-			{
-				/* ************* display S_0 ***********************/
-				HC164_display_arry[0] = seven_seg_code[16];
-				HC164_display_arry[1] = seven_seg_code[16];
-				HC164_display_arry[2] = seven_seg_code[16];
-				HC164_display_arry[3] = seven_seg_code[16];
-				LED_1_dot = RESET;
-				LED_2_dot = RESET;
-				LED_3_dot = RESET;
-				LED_4_dot = RESET;
-			}
-			else
-			{
-				disp_temp_buf = SET_TEMP;
-				LED_temp_display();
-				
-			}
-#else	
 			disp_temp_buf = SET_TEMP;
 			LED_temp_display();
-			
-#endif			
 			break;
 		/*************************************************************************/ 
 		case _LED_mode_4:
@@ -962,24 +765,10 @@ void LED_mode_display(void)
 						th_display = CONTROL_TEMP + eeprom_option_byte[_Control_sensor_offset];
 						break;
 					case	2:
-						if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
-						{
-							th_display = CONDENSER_TEMP;
-							th_no = 3;
-						}
-						else
-						{
-							th_display = BASE_TEMP + eeprom_option_byte[_Base_sensor_offset];
-						}
+						th_display = BASE_TEMP + eeprom_option_byte[_Base_sensor_offset];
 						break;
 					case	3:
 						th_display = CONDENSER_TEMP;
-						break;
-					case	4:
-						th_display = ANTIFRZ_TEMP;
-						break;
-					case	5:
-						th_display = COMP_OUT_TEMP;
 						break;
 			}
 
@@ -1020,7 +809,6 @@ void LED_mode_display(void)
 			}
 			else
 			{
-#if 1  
 				if(IIC_error_code[op_error_record_index] == 0)
 				{
 					/* ************* display noE ***********************/
@@ -1058,13 +846,10 @@ void LED_mode_display(void)
 					HC164_display_arry[3] = seven_seg_code[test_error_code];
 					
 				}
-#endif
 			}
-			
-			
 			break;
 			
-
+#if 0
 		/*************************************************************************/ 
 		case _LED_mode_6:
 			if(flash_flag==0)
@@ -1106,7 +891,7 @@ void LED_mode_display(void)
 				LED_temp_display();
 			}
 			break;
-			
+#endif			
 		/*************************************************************************/ 
 		/*************************************************************************/ 
 		case _LED_mode_8:        // system error status display
@@ -1123,39 +908,7 @@ void LED_mode_display(void)
 					LED_temp_display(); 
 					LED_PV = SET;
 					HC164_display_arry[0] = seven_seg_code[0];		// on/off system
-#if 0					
-					if(SYSTEM_SELECT_SWITCH== RESET)	// on/off system
-					{
-						HC164_display_arry[0] = seven_seg_code[0];
-					}
-					else
-					{
-						HC164_display_arry[0] = seven_seg_code[12];
-					}
-#endif					
 				}
-
-#if 0			
-				// if(ERROR_CODE==0xd1 || ERROR_CODE==0xc6  || ERROR_CODE==0xd3 || ERROR_CODE==0xd4 || ERROR_CODE==0xd7 || ERROR_CODE==0xd8)
-					if(ERROR_CODE==0xd1 || ERROR_CODE==0xc6  || ERROR_CODE==0xd3 || ERROR_CODE==0xd6 || ERROR_CODE==0xd7)
-				{
-					/* ************* display control temp ***********************/
-					HC164_display_arry[0] = seven_seg_code[14];
-					
-					th_display = CONTROL_TEMP + eeprom_option_byte[_Control_sensor_offset];
-					disp_temp_buf = th_display;
-					LED_temp_display(); 
-					LED_PV = SET;
-					if(SYSTEM_SELECT_SWITCH== RESET)	// on/off system
-					{
-						HC164_display_arry[0] = seven_seg_code[0];
-					}
-					else
-					{
-						HC164_display_arry[0] = seven_seg_code[12];
-					}
-				}
-#endif
 			}
 			else
 			{
@@ -1195,28 +948,6 @@ void LED_mode_display(void)
 			}
 			
 			break;
-
-#if 1		
-		/************************* display modbus no ************************************************/ 
-		case _LED_mode_9:
-			HC164_display_arry[0] = seven_seg_code[17];
-			HC164_display_arry[1] = seven_seg_code[17];
-			HC164_display_arry[2] = seven_seg_code[17];
-			disp_temp_buf = Modbus_address;
-			LED_1_dot = RESET;
-			LED_2_dot = RESET;
-			LED_3_dot = RESET;
-			digi_0 = disp_temp_buf/100;	
-			digi_1 = (disp_temp_buf%100)/10;
-			digi_2 = (disp_temp_buf%100)%10;
-			HC164_display_arry[0] = seven_seg_code[16];
-			HC164_display_arry[1] = seven_seg_code[16];		// display space
-			HC164_display_arry[2] = seven_seg_code[digi_1];
-			HC164_display_arry[3] = seven_seg_code[digi_2];
-
-			
-			break;
-#endif						
 		/*************************************************************************/ 
 		/*************************************************************************/ 
 		case _LED_mode_option:
@@ -1363,75 +1094,9 @@ void LED_mode_display(void)
 
 		default:
 			break;
-			
-
-
-
-
-
-
-
 	}
-
-
-
 }
 
-/***********************************************************************************************************************
-* Function Name: volatage_adjust_operation
-* Description  : This function display the information on display board
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-#if 0
-void volatage_adjust_operation(void)
-{
-
-	voltage_buffer[voltage_buffer_pointer] = T_DECP[_Voltage_detect];
-	if(++voltage_buffer_pointer >= 30)
-	{
-		voltage_buffer_pointer = 0;
-	
-		voltage_value_1 = 0;
-		for(voltage_loop_count= 0;voltage_loop_count <=29;voltage_loop_count++)
-		{
-			voltage_value_1 = voltage_value_1 + voltage_buffer[voltage_buffer_pointer];
-		}
-		voltage_value_1 = voltage_value_1 / 30;
-		
-		voltage_offset = voltage_value_1 - default_220v;
-		
-		voltage_value_1 = voltage_offset * 10;
-		voltage_value_1 = voltage_value_1 / 34;
-		
-		voltage_value_1 = voltage_value_1 + 220;
-	}
-	if(voltage_buffer_pointer == 0)
-	{
-		voltage_buffer_1[voltage_buffer_pointer_1] = voltage_value_1;
-		if(++voltage_buffer_pointer_1 >= 30)
-		{
-			voltage_buffer_pointer_1 = 0;
-		
-			voltage_value = 0;
-			for(voltage_loop_count= 0;voltage_loop_count <=29;voltage_loop_count++)
-			{
-				voltage_value = voltage_value + voltage_buffer_1[voltage_buffer_pointer];
-			}
-			voltage_value = voltage_value / 30;
-			
-		}
-	}
-
-
-
-	
-	LED_mode_count = _LED_mode_9;
-	LED_mode_display();
-	
-}
-
-#endif
 /***********************************************************************************************************************
 * Function Name: LED_display
 * Description  : This function display the information on display board
@@ -1554,44 +1219,6 @@ void LED_display_operation_1(void)
 			LED_mode_display();
 	}
 /* ************  end of i sec operation*********************************** */	
-#if 0
-/* ************  filter count operation ************************************ */
-	if(filter_one_sec_count++  > 1000)
-	{
-		filter_one_sec_count = 0;
-		if(current_sys_op_power == SET)  
-		{
-			if(++filter_sec_count > 36000)    
-			{
-				filter_sec_count = 0;
-				if(++filter_10hour_count > 100)
-					filter_10hour_count = 100;
-			}
-		}
-/* ************  filter led operation ************************************ */
-		
-		if(filter_10hour_count >= 50)
-		{
-			if(filter_10hour_count >= 100)
-			{
-				LED_FILTER = SET;
-			}
-			else
-			{
-				if(flash_flag==0)
-					LED_FILTER = SET;
-				else
-					LED_FILTER = RESET;
-			}
-		}
-		else
-			if(production_mode == RESET)
-				LED_FILTER = RESET;
-	}
-/* ************  filter led operation ************************************ */		
-#endif
-
-
 
 /* ************  start of 0.01 sec operation*********************************** */	
 
@@ -1644,48 +1271,6 @@ void LED_display_operation_1(void)
 		{
 			LED_mode_count = _LED_mode_1;
 		}
-
-#if 0		
-		if( ERROR_CODE==0 || ERROR_CODE==0xd3 || ERROR_CODE==0xc7 || ERROR_CODE==0xd6 || ERROR_CODE==0xd7 || ERROR_CODE==0xc6 )
-		{
-			if(production_mode == RESET)
-			{
-				// if(remote_on_off_flag != SET)
-				{
-					key_data = T_DECP[_AD_key] ;
-					if(REMOTE_SW_FUNCTION == 0)	
-						key_data = 1000;
-
-					if((key_data < (key_debunse + key_offset)) && (key_data > (key_debunse - key_offset)))
-					{
-						if(key_debunse_count++ > 5)					
-						{
-							key_debunse_count = 10;
-							get_key_press();
-						}
-					}
-					else
-					{
-						key_debunse = key_data; 
-						key_debunse_count = 0;
-					}
-				}
-			}
-			else
-			{
-				if(production_key_press_check_time++ >10)
-				{
-					get_production_key_press();
-					production_process();
-					production_key_press_check_time = 0;
-				}
-			}
-		}
-		else
-		{
-			LED_mode_count = _LED_mode_1;
-		}
-#endif		
 	}
 }
 
@@ -1867,9 +1452,11 @@ void powerin_test_disp(void)
 #if 1
 	//ms_counter = 0;
 	
-	convert_AD_channel_key();
+	// convert_AD_channel_key();
+	// key_data = current_key_now;
 
-	key_data = current_key_now;
+	key_data = T_DECP[_AD_key] ;
+	
 	production_mode = RESET;
 	if((key_data < (key_value_on_off + key_offset)) && (key_data > (key_value_on_off - key_offset)))								// key on/off enter production program
 	{
@@ -1893,13 +1480,6 @@ void powerin_test_disp(void)
 ***********************************************************************************************************************/
 void get_production_key_press(void)
 {
-#if 0
-	do
-	{
-		convert_AD_channel();
-	}
-	while(adc_conv_end == RESET);
-#endif
 	
 	key_data = T_DECP[_AD_key] ;
 
@@ -1948,7 +1528,7 @@ void get_production_key_press(void)
 							{
 								if(key_press_status==0)
 								{
-									Production_mode_count = _PRODUCTION_mode_3;
+									Production_mode_count = _PRODUCTION_mode_4;
 									relay_test_timer=0;
 									flash_flag=0;
 								//	Buzzer_flag = _Buzzer_OneSound_Bi;
@@ -1959,7 +1539,7 @@ void get_production_key_press(void)
 									{
 										if(key_press_status==0)
 										{
-											Production_mode_count = _PRODUCTION_mode_4;
+											Production_mode_count = _PRODUCTION_mode_5;
 											relay_test_timer=0;
 											flash_flag=0;
 										//	Buzzer_flag = _Buzzer_OneSound_Bi;
@@ -1971,7 +1551,7 @@ void get_production_key_press(void)
 											{
 												if(key_press_status==0)
 												{
-													Production_mode_count = _PRODUCTION_mode_5;
+													Production_mode_count = _PRODUCTION_mode_6;
 													relay_test_timer=0;
 													flash_flag=0;
 												//	Buzzer_flag = _Buzzer_OneSound_Bi;
@@ -2001,36 +1581,42 @@ void production_process(void)
 		
 			/* ************* display Err ***********************/
 
-				switch__set_check = 0;
+			switch__set_check = 0;
 #if 1
 
-				if(SWDIP4_1)
-					switch__set_check = switch__set_check | 0x01;
-				if(SWDIP4_2)
-					switch__set_check = switch__set_check | 0x02;
-				if(SWDIP4_3)
-					switch__set_check = switch__set_check | 0x04;
-				if(SWDIP4_4)
-					switch__set_check = switch__set_check | 0x08;
-				HC164_display_arry[0] = seven_seg_code[switch__set_check];
+			if(SWDIP4_1)
+				switch__set_check = switch__set_check | 0x01;
+			if(SWDIP4_2)
+				switch__set_check = switch__set_check | 0x02;
+			if(SWDIP4_3)
+				switch__set_check = switch__set_check | 0x04;
+			if(SWDIP4_4)
+				switch__set_check = switch__set_check | 0x08;
+			HC164_display_arry[0] = seven_seg_code[switch__set_check];
 
-				switch__set_check = 0;
-				if(SWDIP2_1)
-					switch__set_check = switch__set_check | 0x01;
-				if(SWDIP2_2)
-					switch__set_check = switch__set_check | 0x02;
-				HC164_display_arry[1] = seven_seg_code[switch__set_check];				
+			switch__set_check = 0;
+			if(SWDIP2_1)
+				switch__set_check = switch__set_check | 0x01;
+			if(SWDIP2_2)
+				switch__set_check = switch__set_check | 0x02;
+			HC164_display_arry[1] = seven_seg_code[switch__set_check];				
 
 #endif		
-				// HC164_display_arry[0] = seven_seg_code[switch__set_check];
-				// HC164_display_arry[1] = seven_seg_code[16];
-				HC164_display_arry[2] = seven_seg_code[SW_version/10];
-				HC164_display_arry[3] = seven_seg_code[SW_version%10];
-				
-				LED_1_dot = RESET;
-				LED_2_dot = RESET;
-				LED_3_dot = RESET;
-				LED_4_dot = RESET;
+			// HC164_display_arry[0] = seven_seg_code[switch__set_check];
+			// HC164_display_arry[1] = seven_seg_code[16];
+			HC164_display_arry[2] = seven_seg_code[SW_version/10];
+			HC164_display_arry[3] = seven_seg_code[SW_version%10];
+			
+			LED_1_dot = RESET;
+			LED_2_dot = RESET;
+			LED_3_dot = RESET;
+			LED_4_dot = RESET;
+			
+			LED_RUN = RESET;
+			LED_ALARM = RESET;
+			LED_PV = RESET;
+			LED_SV = RESET;
+
 			if(relay_test_timer < 10)
 			{
 				COMP_RLY = SET;
@@ -2060,14 +1646,22 @@ void production_process(void)
 		
 			break;
 		/*************************************************************************/ 
-		
+		default:
 		case _PRODUCTION_mode_2:	   // temp sensor test test
 
 			COMP_RLY = RESET;
 			PUMP_RLY = RESET;
 			ERROR_RLY = RESET;
 
-
+			LED_1_dot = RESET;
+			LED_2_dot = RESET;
+			LED_3_dot = RESET;
+			LED_4_dot = RESET;
+			
+			LED_RUN = RESET;
+			LED_ALARM = RESET;
+			LED_PV = RESET;
+			LED_SV = RESET;
 
 			if(relay_test_timer < 20)
 			{	
@@ -2084,20 +1678,12 @@ void production_process(void)
 								th_no = 3;
 								
 							} 
-							else	if((relay_test_timer > 60)  && (relay_test_timer < 80))
+							else	if(relay_test_timer > 60)
 									{
-										th_no = 4;
-									
-									} 
-									else	if((relay_test_timer > 80)  && (relay_test_timer < 100))
-											{
-												th_no = 5;
-											} 
-											else	if(relay_test_timer > 100)
-													{
-														relay_test_timer = 0;
-														th_no = 1;
-													} 	
+										relay_test_timer = 0;
+										th_no = 1;
+									} 	
+											
 #if 1			
 			switch(th_no)
 			{
@@ -2106,44 +1692,15 @@ void production_process(void)
 						th_display = CONTROL_TEMP + eeprom_option_byte[_Control_sensor_offset];
 						break;
 					case	2:
-						if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
-						{
-							th_display = 00;
-						}
-						else
-						{
-							th_display = BASE_TEMP + eeprom_option_byte[_Base_sensor_offset];
-						}
+						th_display = BASE_TEMP + eeprom_option_byte[_Base_sensor_offset];
 						break;
 					case	3:
 						th_display = CONDENSER_TEMP;
 						break;	
-					case	4:
-						th_display = ANTIFRZ_TEMP;
-						break;
-					case	5:
-						th_display = COMP_OUT_TEMP;
-						break;
-					
+								
 			}
 
 #endif		
-#if 0
-			if(flash_flag==0)
-			{
-				/* ************* display th1`5 ***********************/
-				HC164_display_arry[0] = seven_seg_code[27];
-				HC164_display_arry[1] = seven_seg_code[28];
-				HC164_display_arry[2] = seven_seg_code[th_no];
-				HC164_display_arry[3] = seven_seg_code[16];
-				LED_1_dot = RESET;
-				LED_2_dot = RESET;
-				LED_3_dot = RESET;
-				LED_4_dot = RESET;
-				LED_display();
-			}
-			else
-#endif				
 			{
 				
 				disp_temp_buf = th_display;
@@ -2151,50 +1708,6 @@ void production_process(void)
 				HC164_display_arry[0] = seven_seg_code[th_no];
 			}		
 		
-			break;
-		/*************************************************************************/ 
-		default:		
-		case _PRODUCTION_mode_3:	   // Voltage  test
-		
-			COMP_RLY = RESET;
-			PUMP_RLY = RESET;
-			ERROR_RLY = RESET;
-			
-			LED_1_dot = RESET;
-			LED_2_dot = RESET;
-			LED_3_dot = RESET;
-			LED_RUN = SET;
-			LED_ALARM = SET;
-			
-//			LED_FILTER = SET;
-#if 1	
-			voltage_offset = voltage_data_max;
-
-			if(PUMP_RLY == SET)
-				voltage_offset = voltage_offset + voltage_small_relay_offset;
-			if(ERROR_RLY == SET)
-				voltage_offset = voltage_offset + voltage_small_relay_offset;
-			if(COMP_RLY == SET)
-				voltage_offset = voltage_offset + voltage_large_relay_offset;
-
-			voltage_offset = voltage_offset - default_220v;
-			
-			voltage_value_1 = voltage_offset * 10;
-			voltage_value_1 = voltage_value_1 / 34;
-			
-			voltage_value_1 = voltage_value_1 + 220;
-
-#endif		
-
-			digi_0 = voltage_value_1/100;  
-			digi_1 = (voltage_value_1%100)/10;
-			digi_2 = (voltage_value_1%100)%10;
-			
-			HC164_display_arry[0] = seven_seg_code[digi_0];
-			HC164_display_arry[1] = seven_seg_code[digi_1];
-			HC164_display_arry[2] = seven_seg_code[digi_2];
-			HC164_display_arry[3] = seven_seg_code[16];
-
 			break;
 		/*************************************************************************/ 
 		case _PRODUCTION_mode_4:	   // Current test
@@ -2209,8 +1722,8 @@ void production_process(void)
 			LED_4_dot = RESET;
 			LED_RUN = SET;
 			LED_ALARM = SET;
-//			LED_FILTER = SET;
-
+			LED_PV = SET;
+			LED_SV = SET;
 			voltage_value_1 = current_data_max - default_0A ; 
 			voltage_value_1 = voltage_value_1 * 7;
 			voltage_value_1 = voltage_value_1 / 10;
@@ -2236,49 +1749,23 @@ void production_process(void)
 			COMP_RLY = RESET;
 			PUMP_RLY = RESET;
 			ERROR_RLY = RESET;
+			LED_1_dot = RESET;
+			LED_2_dot = RESET;
 
-			HC164_display_arry[0] = seven_seg_code[16];
-//			HC164_display_arry[1] = seven_seg_code[0];
-//			HC164_display_arry[2] = seven_seg_code[1];
-
-#define	HEATER_TEMP_PROTECT		P0_bit.no1
-#define	WATERLEVER_LOW_ALARM	P0_bit.no0
-#define	FLOW_SWITCH_PROTECT		P14_bit.no1
-#define	LP_PROTECT				P14_bit.no0
-#define	HP_PROTECT				P12_bit.no0
-#define	POWER_PHASE_PROTECT		P4_bit.no3
-			
-#define	PUMP_OVERLOAD_PROTECT	P4_bit.no2
-#define	FAN_OVERLOAD_PROTECT	P4_bit.no1
-#define	COMP_OVERLOAD_PROTECT	P12_bit.no4
-#define	RESERVE_2				P12_bit.no3
-#define	RESERVE_1				P13_bit.no7
-#define	REMOTE_ON_OFF_SW		P12_bit.no2
-
-
-			
-			if(HEATER_TEMP_PROTECT == 0)
-				LED_1_dot = RESET;
-			else
-				LED_1_dot = SET;
-			if(WATERLEVER_LOW_ALARM == 0)
-				LED_2_dot = RESET;
-			else
-				LED_2_dot = SET;
 			if(FLOW_SWITCH_PROTECT == 0)
 				LED_3_dot = RESET;
 			else
 				LED_3_dot = SET;
-			if(LP_PROTECT == 0)
+			if(POWER_PHASE_PROTECT == 0)
 				LED_4_dot = RESET;
 			else
 				LED_4_dot = SET;
 
-			if(HP_PROTECT == 0)
+			if(REMOTE_ON_OFF_SW == 0)
 				LED_PV = RESET;
 			else
 				LED_PV = SET;
-			if(POWER_PHASE_PROTECT == 0)
+			if(COMP_OVERLOAD_PROTECT == 0)
 				LED_SV = RESET;
 			else
 				LED_SV = SET;
@@ -2293,47 +1780,32 @@ void production_process(void)
 				LED_ALARM = SET;	
 
 
-			if(COMP_OVERLOAD_PROTECT == 0)
-				HC164_display_arry[0] = seven_seg_code[1];
-			else
-				HC164_display_arry[0] = seven_seg_code[2];
-			
-			if(RESERVE_2 == 0)
-				HC164_display_arry[1] = seven_seg_code[1];
-			else
-				HC164_display_arry[1] = seven_seg_code[2];			
-			if(RESERVE_1 == 0)
-				HC164_display_arry[2] = seven_seg_code[1];
-			else
-				HC164_display_arry[2] = seven_seg_code[2];
-			
-			if(REMOTE_ON_OFF_SW == 0)
-				HC164_display_arry[3] = seven_seg_code[1];
-			else
-				HC164_display_arry[3] = seven_seg_code[2];
+			HC164_display_arry[0] = seven_seg_code[16];
+			HC164_display_arry[1] = seven_seg_code[16]; 	// display space
+			HC164_display_arry[2] = seven_seg_code[16];
+			HC164_display_arry[3] = seven_seg_code[16];
 
 			break;
 #if 1		
-			/*************************************************************************/ 
-			case _PRODUCTION_mode_6:
-				
-				LED_1_dot = RESET;
-				LED_2_dot = RESET;
-				LED_3_dot = RESET;
-				LED_4_dot = RESET;
-				HC164_display_arry[0] = seven_seg_code[16];
-				HC164_display_arry[1] = seven_seg_code[16]; 	// display space
-				HC164_display_arry[2] = seven_seg_code[16];
-				HC164_display_arry[3] = seven_seg_code[16];
-	
-				
-				break;
+		/*************************************************************************/ 
+		case _PRODUCTION_mode_6:
+			
+			LED_1_dot = RESET;
+			LED_2_dot = RESET;
+			LED_3_dot = RESET;
+			LED_4_dot = RESET;
+			LED_RUN = RESET;
+			LED_ALARM = RESET;
+			LED_PV = RESET;
+			LED_SV = RESET;
+			HC164_display_arry[0] = seven_seg_code[16];
+			HC164_display_arry[1] = seven_seg_code[16]; 	// display space
+			HC164_display_arry[2] = seven_seg_code[16];
+			HC164_display_arry[3] = seven_seg_code[16];
+			break;
 #endif						
-			/*************************************************************************/ 
-
-		
+		/*************************************************************************/ 
 	}
-
 }
 
 

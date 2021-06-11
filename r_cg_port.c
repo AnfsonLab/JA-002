@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_port.c
-* Version      : CodeGenerator for RL78/G13 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G13 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for PORT module.
-* Creation Date: 2021/5/16
+* Creation Date: 2021/6/9
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -55,33 +55,24 @@ Global variables and functions
 ***********************************************************************************************************************/
 void R_PORT_Create(void)
 {
-    P0 = _00_Pn5_OUTPUT_0 | _00_Pn6_OUTPUT_0;
-    P1 = _00_Pn0_OUTPUT_0 | _00_Pn5_OUTPUT_0 | _00_Pn6_OUTPUT_0;
-    P3 = _00_Pn0_OUTPUT_0;
-    P5 = _00_Pn0_OUTPUT_0 | _00_Pn2_OUTPUT_0 | _00_Pn3_OUTPUT_0 | _00_Pn4_OUTPUT_0 | _00_Pn5_OUTPUT_0;
-    P7 = _00_Pn0_OUTPUT_0 | _00_Pn1_OUTPUT_0 | _00_Pn2_OUTPUT_0 | _00_Pn3_OUTPUT_0 | _00_Pn4_OUTPUT_0 |
-         _00_Pn5_OUTPUT_0 | _00_Pn6_OUTPUT_0 | _00_Pn7_OUTPUT_0;
-    P13 = _00_Pn0_OUTPUT_0;
-    P14 = _00_Pn6_OUTPUT_0;
+    P1 = _00_Pn0_OUTPUT_0 | _00_Pn6_OUTPUT_0;
+    P5 = _00_Pn2_OUTPUT_0 | _00_Pn4_OUTPUT_0;
+    P14 = _00_Pn6_OUTPUT_0 | _00_Pn7_OUTPUT_0;
     PU0 = _10_PUn4_PULLUP_ON;
     PU1 = _80_PUn7_PULLUP_ON;
     PU3 = _02_PUn1_PULLUP_ON;
     PU5 = _02_PUn1_PULLUP_ON;
-    PU14 = _80_PUn7_PULLUP_ON;
-    PMC12 = _00_PMCn0_DI_ON | _FE_PMC12_DEFAULT;
-    PM0 = _01_PMn0_MODE_INPUT | _02_PMn1_MODE_INPUT | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_MODE_INPUT |
-          _00_PMn5_MODE_OUTPUT | _00_PMn6_MODE_OUTPUT | _80_PM0_DEFAULT;
+    PU7 = _01_PUn0_PULLUP_ON | _02_PUn1_PULLUP_ON | _04_PUn2_PULLUP_ON | _08_PUn3_PULLUP_ON | _10_PUn4_PULLUP_ON |
+          _20_PUn5_PULLUP_ON | _40_PUn6_PULLUP_ON | _80_PUn7_PULLUP_ON;
+    PMC14 = _00_PMCn7_DI_ON | _7F_PMC14_DEFAULT;
     PM1 = _00_PMn0_MODE_OUTPUT | _02_PMn1_NOT_USE | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_NOT_USE |
-          _00_PMn5_MODE_OUTPUT | _00_PMn6_MODE_OUTPUT | _80_PMn7_NOT_USE;
-    PM3 = _00_PMn0_MODE_OUTPUT | _02_PMn1_MODE_INPUT | _FC_PM3_DEFAULT;
+          _20_PMn5_NOT_USE | _00_PMn6_MODE_OUTPUT | _80_PMn7_NOT_USE;
     PM4 = _01_PMn0_NOT_USE | _02_PMn1_MODE_INPUT | _04_PMn2_MODE_INPUT | _08_PMn3_MODE_INPUT | _F0_PM4_DEFAULT;
-    PM5 = _00_PMn0_MODE_OUTPUT | _02_PMn1_MODE_INPUT | _00_PMn2_MODE_OUTPUT | _00_PMn3_MODE_OUTPUT |
-          _00_PMn4_MODE_OUTPUT | _00_PMn5_MODE_OUTPUT | _C0_PM5_DEFAULT;
-    PM6 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _04_PMn2_MODE_INPUT | _08_PMn3_MODE_INPUT | _F0_PM6_DEFAULT;
-    PM7 = _00_PMn0_MODE_OUTPUT | _00_PMn1_MODE_OUTPUT | _00_PMn2_MODE_OUTPUT | _00_PMn3_MODE_OUTPUT |
-          _00_PMn4_MODE_OUTPUT | _00_PMn5_MODE_OUTPUT | _00_PMn6_MODE_OUTPUT | _00_PMn7_MODE_OUTPUT;
-    PM12 = _01_PMn0_MODE_INPUT | _FE_PM12_DEFAULT;
-    PM14 = _01_PMn0_MODE_INPUT | _02_PMn1_MODE_INPUT | _00_PMn6_MODE_OUTPUT | _80_PMn7_NOT_USE | _3C_PM14_DEFAULT;
+    PM5 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _00_PMn2_MODE_OUTPUT | _08_PMn3_NOT_USE | _00_PMn4_MODE_OUTPUT |
+          _20_PMn5_NOT_USE | _C0_PM5_DEFAULT;
+    PM7 = _01_PMn0_MODE_INPUT | _02_PMn1_MODE_INPUT | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_MODE_INPUT |
+          _20_PMn5_MODE_INPUT | _40_PMn6_MODE_INPUT | _80_PMn7_MODE_INPUT;
+    PM14 = _01_PMn0_NOT_USE | _02_PMn1_MODE_INPUT | _00_PMn6_MODE_OUTPUT | _00_PMn7_MODE_OUTPUT | _3C_PM14_DEFAULT;
 }
 
 /* Start user code for adding. Do not edit comment generated here */

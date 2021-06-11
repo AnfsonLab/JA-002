@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_userdefine.h
-* Version      : CodeGenerator for RL78/G13 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G13 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file includes user definition.
-* Creation Date: 2021/5/16
+* Creation Date: 2021/6/9
 ***********************************************************************************************************************/
 
 #ifndef _USER_DEF_H
@@ -69,19 +69,20 @@ typedef union
 #define	_Condenser_sensor	2	//ANI2
 //#define	_Antifrz_sensor		3	//ANI3
 //#define	_Comp_out_sensor	4	//ANI4
-#define	_AD_key				12
+#define _Voltage_sensor		6
+#define	_AD_key				7
 
 /*  ************************************************************* */
 
 /*  ************* SW s1 & s2  ************************************************ */
 
-#define	SWDIP2_1	P0_bit.no4
-#define	SWDIP2_2	P5_bit.no1
+#define	SWDIP2_1	P7_bit.no0
+#define	SWDIP2_2	P7_bit.no1
 
-#define	SWDIP4_1	P12_bit.no1
-#define	SWDIP4_2	P6_bit.no2
-#define	SWDIP4_3	P6_bit.no3
-#define	SWDIP4_4	P3_bit.no1
+#define	SWDIP4_1	P7_bit.no4
+#define	SWDIP4_2	P7_bit.no5
+#define	SWDIP4_3	P7_bit.no6
+#define	SWDIP4_4	P7_bit.no7
 
 
 #define	FIX_TYPE_SENSOR			0	
@@ -100,14 +101,14 @@ extern 	flag_t	_dip_switch_data_;
 #if 1
 // #define	HEATER_TEMP_PROTECT		P0_bit.no1
 //#define	WATERLEVER_LOW_ALARM	P0_bit.no0
-#define	FLOW_SWITCH_PROTECT		P14_bit.no1
+#define	FLOW_SWITCH_PROTECT		P12_bit.no4
 // #define	LP_PROTECT				P14_bit.no0
 // #define	HP_PROTECT				P12_bit.no0
-#define	POWER_PHASE_PROTECT		P4_bit.no3
+#define	POWER_PHASE_PROTECT		P14_bit.no1
 
-#define	PUMP_OVERLOAD_PROTECT	P4_bit.no2
-#define	FAN_OVERLOAD_PROTECT	P4_bit.no1
-#define	COMP_OVERLOAD_PROTECT	P12_bit.no4
+#define	PUMP_OVERLOAD_PROTECT	P4_bit.no1
+#define	FAN_OVERLOAD_PROTECT	P4_bit.no2
+#define	COMP_OVERLOAD_PROTECT	P4_bit.no3
 // #define	RESERVE_2				P12_bit.no3
 // #define	RESERVE_1				P13_bit.no7
 
@@ -125,7 +126,7 @@ extern 	flag_t	_dip_switch_data_;
 /* *****************   ICEWATER LED/KEY Board define  ******************************** */
 #define	MC14094_STRB	P14_bit.no6
 #define	MC14094_CLK		P1_bit.no0
-#define	MC14094_SER		P13_bit.no0
+#define	MC14094_SER		P14_bit.no7
 /*  ************************************************************* */
 /* General Values */
 #define LED_ON			(0)
@@ -378,9 +379,9 @@ typedef enum
 }EEPROM_BUFFER_T;
 
 
-typedef enum{_PRODUCTION_mode_1,_PRODUCTION_mode_2,_PRODUCTION_mode_3,_PRODUCTION_mode_4,_PRODUCTION_mode_5,_PRODUCTION_mode_6}PRODUCTION_MODE_DEFINE;
+typedef enum{_PRODUCTION_mode_1,_PRODUCTION_mode_2,_PRODUCTION_mode_4,_PRODUCTION_mode_5,_PRODUCTION_mode_6}PRODUCTION_MODE_DEFINE;
 			
-typedef enum{_LED_mode_1,_LED_mode_2,_LED_mode_4,_LED_mode_5,_LED_mode_6,_LED_mode_7,_LED_mode_8,_LED_mode_9,_LED_mode_option,_LED_key_check}LED_MODE_DEFINE;
+typedef enum{_LED_mode_1,_LED_mode_2,_LED_mode_4,_LED_mode_5,_LED_mode_8,_LED_mode_option,_LED_key_check}LED_MODE_DEFINE;
 	
 #if 1
 	typedef enum{op_state_index,op_state_power,op_state_set_temp_H,op_state_set_temp_L
@@ -468,7 +469,7 @@ extern 	flag_t	_current_sys_op_status_;
 
 #define ERROR_RLY_NORMAL 1   /* 1 for normal operation, 0 for error relay not on */
 #define SENSOR_DEBUNSE	20   /* 1 for 0.1 sec */
-#define SW_BASE	10
+#define SW_BASE	11
 #define	ERROR_BACKUP_SET	2	/* 1 for 1 sec */
 #define	STATE_BACKUP_SET	4	/* 1 for 1 sec */
 

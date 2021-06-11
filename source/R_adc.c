@@ -97,7 +97,7 @@ const  unsigned  int  cal_table_1[]={
  }; /* To�PTe���ū�Table,�����q��5k */
 
 
-
+#if 0
   /*******************************************************************************
   * Function name : ADC_conver for key input
   * Description   : none
@@ -122,9 +122,9 @@ const  unsigned  int  cal_table_1[]={
 	 current_key_now = (ADCR >> 6U);
  
   }
- 
+ #endif
   /* ***************************************************************** */
- 
+ #if 0
    /*******************************************************************************
    * Function name : ADC_conver for voltage input
    * Description   : none
@@ -151,7 +151,7 @@ const  unsigned  int  cal_table_1[]={
    }
   
    /* ***************************************************************** */
-  
+ #endif 
   
  
  

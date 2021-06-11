@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_adc.c
-* Version      : CodeGenerator for RL78/G13 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G13 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for ADC module.
-* Creation Date: 2021/5/16
+* Creation Date: 2021/6/9
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -65,9 +65,6 @@ void R_ADC_Create(void)
     /* The reset status of ADPC is analog input, so it's unnecessary to set. */
     /* Set ANI0 - ANI7 pin as analog input */
     PM2 |= 0xFFU;
-    /* Set ANI18 pin */
-    PMC14 |= 0x80U;
-    PM14 |= 0x80U;
     ADM0 = _08_AD_CONVERSION_CLOCK_32 | _00_AD_TIME_MODE_NORMAL_1 | _00_AD_OPERMODE_SELECT;
     ADM1 = _00_AD_TRIGGER_SOFTWARE | _00_AD_CONVMODE_CONSELECT;
     ADM2 = _00_AD_POSITIVE_VDD | _00_AD_NEGATIVE_VSS | _00_AD_AREA_MODE_1 | _00_AD_RESOLUTION_10BIT;          

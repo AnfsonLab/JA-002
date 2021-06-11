@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_serial.c
-* Version      : CodeGenerator for RL78/G13 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G13 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2021/5/16
+* Creation Date: 2021/6/9
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -594,7 +594,7 @@ MD_STATUS R_IICA0_Master_Send(uint8_t adr, uint8_t * const tx_buf, uint16_t tx_n
 
     IICAMK0 = 1U;  /* disable INTIICA0 interrupt */
     
-    if (1U == IICBSY0)
+    if ((1U == IICBSY0) && (0U == MSTS0))
     {
         /* Check bus busy */
         IICAMK0 = 0U;  /* enable INTIICA0 interrupt */
@@ -647,7 +647,7 @@ MD_STATUS R_IICA0_Master_Receive(uint8_t adr, uint8_t * const rx_buf, uint16_t r
 
     IICAMK0 = 1U;  /* disable INTIIA0 interrupt */
     
-    if (1U == IICBSY0)
+    if ((1U == IICBSY0) && (0U == MSTS0))
     {
         /* Check bus busy */
         IICAMK0 = 0U;  /* enable INTIIA0 interrupt */

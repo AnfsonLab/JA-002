@@ -129,36 +129,7 @@ void	UART1_send_loop(void)
 			
 	}
 	/* ***************************************************************************************************************** */	
-	UART1_TxBuff[index++] = 0x20;    // " "
-	UART1_TxBuff[index++] = 0x56;	// "V"
-	UART1_TxBuff[index++] = 0x3D;	// "="
-	/* ***************************************************************************************************************** */ 
-	{
-				
-			disp_room_temp = voltage_data_max;
 
-			if(PUMP_RLY == SET)
-				disp_room_temp = disp_room_temp + voltage_small_relay_offset;
-			if(ERROR_RLY == SET)
-				disp_room_temp = disp_room_temp + voltage_small_relay_offset;
-			if(COMP_RLY == SET)
-				disp_room_temp = disp_room_temp + voltage_large_relay_offset;
-
-			disp_room_temp = disp_room_temp - default_220v;
-			
-			disp_room_temp = disp_room_temp * 10;
-			disp_room_temp = disp_room_temp / 34;
-			
-			disp_room_temp = disp_room_temp + 220;
-
-
-			UART1_TxBuff[index++] = disp_room_temp/1000 + 0x30;    
-			UART1_TxBuff[index++] = (disp_room_temp%1000)/100 + 0x30;
-			UART1_TxBuff[index++] = (disp_room_temp%100)/10 + 0x30;
-			UART1_TxBuff[index++] = (disp_room_temp%10) + 0x30;
-			
-	}
-	/* ***************************************************************************************************************** */ 
 	UART1_TxBuff[index++] = 0x20;    // "!"
 	UART1_TxBuff[index++] = 0x20;    // "!"
 	UART1_TxBuff[index++] = 0x20;    // "!"

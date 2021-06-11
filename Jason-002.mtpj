@@ -1972,286 +1972,286 @@ source
     <Instance Guid="ba6251f6-617d-42ff-9ebd-1dd7a0d34100">
       <KeyDatasRowCount>64,27,217,0,0</KeyDatasRowCount>
       <KeyUserAddedColumnCount>0</KeyUserAddedColumnCount>
-      <KeyPinGridData0>ANI19,I,-,,</KeyPinGridData0>
+      <KeyPinGridData0>Free,-,-,,</KeyPinGridData0>
       <KeyPinGridData1>P43,I,-,,</KeyPinGridData1>
-      <KeyPinGridData2>Free,-,-,,</KeyPinGridData2>
-      <KeyPinGridData3>Free,-,-,,</KeyPinGridData3>
+      <KeyPinGridData2>P42,I,-,,</KeyPinGridData2>
+      <KeyPinGridData3>P41,I,-,,</KeyPinGridData3>
       <KeyPinGridData4>TOOL0,I/O,-,,</KeyPinGridData4>
       <KeyPinGridData5>_RESET,I,-,,</KeyPinGridData5>
-      <KeyPinGridData6>Free,-,-,,</KeyPinGridData6>
+      <KeyPinGridData6>P124,I,-,,</KeyPinGridData6>
       <KeyPinGridData7>Free,-,-,,</KeyPinGridData7>
       <KeyPinGridData8>Free,-,-,,</KeyPinGridData8>
-      <KeyPinGridData9>Free,-,-,,</KeyPinGridData9>
+      <KeyPinGridData9>P122,I,-,,</KeyPinGridData9>
       <KeyPinGridData10>Free,-,-,,</KeyPinGridData10>
       <KeyPinGridData11>REGC,-,-,,</KeyPinGridData11>
       <KeyPinGridData12>VSS,-,-,,</KeyPinGridData12>
       <KeyPinGridData13>EVSS0,-,-,,</KeyPinGridData13>
       <KeyPinGridData14>VDD,-,-,,</KeyPinGridData14>
       <KeyPinGridData15>EVDD0,-,-,,</KeyPinGridData15>
-      <KeyPinGridData16>Free,-,-,,</KeyPinGridData16>
-      <KeyPinGridData17>Free,-,-,,</KeyPinGridData17>
+      <KeyPinGridData16>SCLA0,O,-,,</KeyPinGridData16>
+      <KeyPinGridData17>SDAA0,I/O,-,,</KeyPinGridData17>
       <KeyPinGridData18>Free,-,-,,</KeyPinGridData18>
       <KeyPinGridData19>Free,-,-,,</KeyPinGridData19>
       <KeyPinGridData20>Free,-,-,,</KeyPinGridData20>
-      <KeyPinGridData21>Free,-,-,,</KeyPinGridData21>
-      <KeyPinGridData22>Free,-,-,,</KeyPinGridData22>
-      <KeyPinGridData23>Free,-,-,,</KeyPinGridData23>
-      <KeyPinGridData24>Free,-,-,,</KeyPinGridData24>
-      <KeyPinGridData25>P73,I,-,,</KeyPinGridData25>
-      <KeyPinGridData26>P72,I,-,,</KeyPinGridData26>
-      <KeyPinGridData27>P71,O,No,,</KeyPinGridData27>
-      <KeyPinGridData28>P70,O,-,,</KeyPinGridData28>
-      <KeyPinGridData29>TI06,I,-,,</KeyPinGridData29>
-      <KeyPinGridData30>P05,O,-,,</KeyPinGridData30>
-      <KeyPinGridData31>P30,O,-,,</KeyPinGridData31>
-      <KeyPinGridData32>P50,O,No,,</KeyPinGridData32>
-      <KeyPinGridData33>P51,O,-,,</KeyPinGridData33>
+      <KeyPinGridData21>P77,I,-,,</KeyPinGridData21>
+      <KeyPinGridData22>P76,I,-,,</KeyPinGridData22>
+      <KeyPinGridData23>P75,I,-,,</KeyPinGridData23>
+      <KeyPinGridData24>P74,I,-,,</KeyPinGridData24>
+      <KeyPinGridData25>Free,-,-,,</KeyPinGridData25>
+      <KeyPinGridData26>Free,-,-,,</KeyPinGridData26>
+      <KeyPinGridData27>P71,I,-,,</KeyPinGridData27>
+      <KeyPinGridData28>P70,I,-,,</KeyPinGridData28>
+      <KeyPinGridData29>Free,-,-,,</KeyPinGridData29>
+      <KeyPinGridData30>Free,-,-,,</KeyPinGridData30>
+      <KeyPinGridData31>Free,-,-,,</KeyPinGridData31>
+      <KeyPinGridData32>Free,-,-,,</KeyPinGridData32>
+      <KeyPinGridData33>Free,-,-,,</KeyPinGridData33>
       <KeyPinGridData34>P52,O,No,,</KeyPinGridData34>
-      <KeyPinGridData35>P53,O,No,,</KeyPinGridData35>
+      <KeyPinGridData35>Free,-,-,,</KeyPinGridData35>
       <KeyPinGridData36>P54,O,No,,</KeyPinGridData36>
-      <KeyPinGridData37>P55,O,No,,</KeyPinGridData37>
+      <KeyPinGridData37>Free,-,-,,</KeyPinGridData37>
       <KeyPinGridData38>Free,-,-,,</KeyPinGridData38>
-      <KeyPinGridData39>Free,-,-,,</KeyPinGridData39>
+      <KeyPinGridData39>P16,O,-,,</KeyPinGridData39>
       <KeyPinGridData40>Free,-,-,,</KeyPinGridData40>
       <KeyPinGridData41>RxD2,I,-,,</KeyPinGridData41>
       <KeyPinGridData42>TxD2,O,No,,</KeyPinGridData42>
       <KeyPinGridData43>TxD0,O,No,,</KeyPinGridData43>
       <KeyPinGridData44>RxD0,I,-,,</KeyPinGridData44>
-      <KeyPinGridData45>Free,-,-,,</KeyPinGridData45>
-      <KeyPinGridData46>Free,-,-,,</KeyPinGridData46>
-      <KeyPinGridData47>Free,-,-,,</KeyPinGridData47>
-      <KeyPinGridData48>Free,-,-,,</KeyPinGridData48>
-      <KeyPinGridData49>Free,-,-,,</KeyPinGridData49>
-      <KeyPinGridData50>Free,-,-,,</KeyPinGridData50>
-      <KeyPinGridData51>Free,-,-,,</KeyPinGridData51>
+      <KeyPinGridData45>P10,O,No,,</KeyPinGridData45>
+      <KeyPinGridData46>P146,O,-,,</KeyPinGridData46>
+      <KeyPinGridData47>P147,O,-,,</KeyPinGridData47>
+      <KeyPinGridData48>ANI7,I,-,,</KeyPinGridData48>
+      <KeyPinGridData49>ANI6,I,-,,</KeyPinGridData49>
+      <KeyPinGridData50>ANI5,I,-,,</KeyPinGridData50>
+      <KeyPinGridData51>ANI4,I,-,,</KeyPinGridData51>
       <KeyPinGridData52>ANI3,I,-,,</KeyPinGridData52>
       <KeyPinGridData53>ANI2,I,-,,</KeyPinGridData53>
       <KeyPinGridData54>ANI1,I,-,,</KeyPinGridData54>
       <KeyPinGridData55>ANI0,I,-,,</KeyPinGridData55>
       <KeyPinGridData56>Free,-,-,,</KeyPinGridData56>
       <KeyPinGridData57>Free,-,-,,</KeyPinGridData57>
-      <KeyPinGridData58>Free,-,-,,</KeyPinGridData58>
-      <KeyPinGridData59>Free,-,-,,</KeyPinGridData59>
+      <KeyPinGridData58>RxD1,I,-,,</KeyPinGridData58>
+      <KeyPinGridData59>TxD1,O,No,,</KeyPinGridData59>
       <KeyPinGridData60>Free,-,-,,</KeyPinGridData60>
       <KeyPinGridData61>Free,-,-,,</KeyPinGridData61>
-      <KeyPinGridData62>Free,-,-,,</KeyPinGridData62>
+      <KeyPinGridData62>P141,I,-,,</KeyPinGridData62>
       <KeyPinGridData63>Free,-,-,,</KeyPinGridData63>
-      <KeyMacGridData0>P30,O,-,,</KeyMacGridData0>
+      <KeyMacGridData0>Free,-,-,,</KeyMacGridData0>
       <KeyMacGridData1>_RESET,I,-,,</KeyMacGridData1>
       <KeyMacGridData2>REGC,-,-,,</KeyMacGridData2>
       <KeyMacGridData3>VSS,-,-,,</KeyMacGridData3>
       <KeyMacGridData4>EVSS0,-,-,,</KeyMacGridData4>
       <KeyMacGridData5>VDD,-,-,,</KeyMacGridData5>
       <KeyMacGridData6>EVDD0,-,-,,</KeyMacGridData6>
-      <KeyMacGridData7>Free,-,-,,</KeyMacGridData7>
-      <KeyMacGridData8>Free,-,-,,</KeyMacGridData8>
-      <KeyMacGridData9>Free,-,-,,</KeyMacGridData9>
-      <KeyMacGridData10>Free,-,-,,</KeyMacGridData10>
+      <KeyMacGridData7>ANI7,I,-,,</KeyMacGridData7>
+      <KeyMacGridData8>ANI6,I,-,,</KeyMacGridData8>
+      <KeyMacGridData9>ANI5,I,-,,</KeyMacGridData9>
+      <KeyMacGridData10>ANI4,I,-,,</KeyMacGridData10>
       <KeyMacGridData11>ANI3,I,-,,</KeyMacGridData11>
       <KeyMacGridData12>ANI2,I,-,,</KeyMacGridData12>
       <KeyMacGridData13>ANI1,I,-,,</KeyMacGridData13>
       <KeyMacGridData14>ANI0,I,-,,</KeyMacGridData14>
-      <KeyMacGridData15>ANI19,I,-,,</KeyMacGridData15>
-      <KeyMacGridData16>Free,-,-,,</KeyMacGridData16>
+      <KeyMacGridData15>Free,-,-,,</KeyMacGridData15>
+      <KeyMacGridData16>P124,I,-,,</KeyMacGridData16>
       <KeyMacGridData17>Free,-,-,,</KeyMacGridData17>
-      <KeyMacGridData18>Free,-,-,,</KeyMacGridData18>
+      <KeyMacGridData18>P122,I,-,,</KeyMacGridData18>
       <KeyMacGridData19>Free,-,-,,</KeyMacGridData19>
-      <KeyMacGridData20>TI06,I,-,,</KeyMacGridData20>
-      <KeyMacGridData21>P05,O,-,,</KeyMacGridData21>
+      <KeyMacGridData20>Free,-,-,,</KeyMacGridData20>
+      <KeyMacGridData21>Free,-,-,,</KeyMacGridData21>
       <KeyMacGridData22>Free,-,-,,</KeyMacGridData22>
-      <KeyMacGridData23>Free,-,-,,</KeyMacGridData23>
-      <KeyMacGridData24>Free,-,-,,</KeyMacGridData24>
+      <KeyMacGridData23>RxD1,I,-,,</KeyMacGridData23>
+      <KeyMacGridData24>TxD1,O,No,,</KeyMacGridData24>
       <KeyMacGridData25>Free,-,-,,</KeyMacGridData25>
       <KeyMacGridData26>Free,-,-,,</KeyMacGridData26>
       <KeyMacGridData27>Free,-,-,,</KeyMacGridData27>
-      <KeyMacGridData28>Free,-,-,,</KeyMacGridData28>
+      <KeyMacGridData28>P16,O,-,,</KeyMacGridData28>
       <KeyMacGridData29>Free,-,-,,</KeyMacGridData29>
       <KeyMacGridData30>RxD2,I,-,,</KeyMacGridData30>
       <KeyMacGridData31>TxD2,O,No,,</KeyMacGridData31>
       <KeyMacGridData32>TxD0,O,No,,</KeyMacGridData32>
       <KeyMacGridData33>RxD0,I,-,,</KeyMacGridData33>
-      <KeyMacGridData34>Free,-,-,,</KeyMacGridData34>
-      <KeyMacGridData35>Free,-,-,,</KeyMacGridData35>
-      <KeyMacGridData36>Free,-,-,,</KeyMacGridData36>
+      <KeyMacGridData34>P10,O,No,,</KeyMacGridData34>
+      <KeyMacGridData35>SCLA0,O,-,,</KeyMacGridData35>
+      <KeyMacGridData36>SDAA0,I/O,-,,</KeyMacGridData36>
       <KeyMacGridData37>RxD2,I,-,,</KeyMacGridData37>
       <KeyMacGridData38>TxD2,O,No,,</KeyMacGridData38>
-      <KeyMacGridData39>Free,-,-,,</KeyMacGridData39>
-      <KeyMacGridData40>Free,-,-,,</KeyMacGridData40>
-      <KeyMacGridData41>Free,-,-,,</KeyMacGridData41>
-      <KeyMacGridData42>Free,-,-,,</KeyMacGridData42>
-      <KeyMacGridData43>P73,I,-,,</KeyMacGridData43>
-      <KeyMacGridData44>P72,I,-,,</KeyMacGridData44>
-      <KeyMacGridData45>P71,O,No,,</KeyMacGridData45>
-      <KeyMacGridData46>P70,O,-,,</KeyMacGridData46>
+      <KeyMacGridData39>P77,I,-,,</KeyMacGridData39>
+      <KeyMacGridData40>P76,I,-,,</KeyMacGridData40>
+      <KeyMacGridData41>P75,I,-,,</KeyMacGridData41>
+      <KeyMacGridData42>P74,I,-,,</KeyMacGridData42>
+      <KeyMacGridData43>Free,-,-,,</KeyMacGridData43>
+      <KeyMacGridData44>Free,-,-,,</KeyMacGridData44>
+      <KeyMacGridData45>P71,I,-,,</KeyMacGridData45>
+      <KeyMacGridData46>P70,I,-,,</KeyMacGridData46>
       <KeyMacGridData47>P43,I,-,,</KeyMacGridData47>
-      <KeyMacGridData48>Free,-,-,,</KeyMacGridData48>
-      <KeyMacGridData49>Free,-,-,,</KeyMacGridData49>
+      <KeyMacGridData48>P42,I,-,,</KeyMacGridData48>
+      <KeyMacGridData49>P41,I,-,,</KeyMacGridData49>
       <KeyMacGridData50>TOOL0,I/O,-,,</KeyMacGridData50>
       <KeyMacGridData51>Free,-,-,,</KeyMacGridData51>
       <KeyMacGridData52>Free,-,-,,</KeyMacGridData52>
       <KeyMacGridData53>TxD0,O,No,,</KeyMacGridData53>
       <KeyMacGridData54>RxD0,I,-,,</KeyMacGridData54>
-      <KeyMacGridData55>Free,-,-,,</KeyMacGridData55>
-      <KeyMacGridData56>Free,-,-,,</KeyMacGridData56>
-      <KeyMacGridData57>P72,I,-,,</KeyMacGridData57>
-      <KeyMacGridData58>P71,O,No,,</KeyMacGridData58>
-      <KeyMacGridData59>P70,O,-,,</KeyMacGridData59>
-      <KeyMacGridData60>Free,-,-,,</KeyMacGridData60>
+      <KeyMacGridData55>P77,I,-,,</KeyMacGridData55>
+      <KeyMacGridData56>P76,I,-,,</KeyMacGridData56>
+      <KeyMacGridData57>Free,-,-,,</KeyMacGridData57>
+      <KeyMacGridData58>P71,I,-,,</KeyMacGridData58>
+      <KeyMacGridData59>P70,I,-,,</KeyMacGridData59>
+      <KeyMacGridData60>P16,O,-,,</KeyMacGridData60>
       <KeyMacGridData61>Free,-,-,,</KeyMacGridData61>
       <KeyMacGridData62>RxD2,I,-,,</KeyMacGridData62>
       <KeyMacGridData63>TxD2,O,No,,</KeyMacGridData63>
-      <KeyMacGridData64>P50,O,No,,</KeyMacGridData64>
-      <KeyMacGridData65>P51,O,-,,</KeyMacGridData65>
+      <KeyMacGridData64>Free,-,-,,</KeyMacGridData64>
+      <KeyMacGridData65>Free,-,-,,</KeyMacGridData65>
       <KeyMacGridData66>P52,O,No,,</KeyMacGridData66>
-      <KeyMacGridData67>P53,O,No,,</KeyMacGridData67>
+      <KeyMacGridData67>Free,-,-,,</KeyMacGridData67>
       <KeyMacGridData68>P54,O,No,,</KeyMacGridData68>
-      <KeyMacGridData69>P55,O,No,,</KeyMacGridData69>
-      <KeyMacGridData70>ANI19,I,-,,</KeyMacGridData70>
+      <KeyMacGridData69>Free,-,-,,</KeyMacGridData69>
+      <KeyMacGridData70>Free,-,-,,</KeyMacGridData70>
       <KeyMacGridData71>P43,I,-,,</KeyMacGridData71>
-      <KeyMacGridData72>Free,-,-,,</KeyMacGridData72>
-      <KeyMacGridData73>Free,-,-,,</KeyMacGridData73>
+      <KeyMacGridData72>P42,I,-,,</KeyMacGridData72>
+      <KeyMacGridData73>P41,I,-,,</KeyMacGridData73>
       <KeyMacGridData74>TOOL0,I/O,-,,</KeyMacGridData74>
       <KeyMacGridData75>_RESET,I,-,,</KeyMacGridData75>
-      <KeyMacGridData76>Free,-,-,,</KeyMacGridData76>
+      <KeyMacGridData76>P124,I,-,,</KeyMacGridData76>
       <KeyMacGridData77>Free,-,-,,</KeyMacGridData77>
       <KeyMacGridData78>Free,-,-,,</KeyMacGridData78>
-      <KeyMacGridData79>Free,-,-,,</KeyMacGridData79>
+      <KeyMacGridData79>P122,I,-,,</KeyMacGridData79>
       <KeyMacGridData80>Free,-,-,,</KeyMacGridData80>
       <KeyMacGridData81>REGC,-,-,,</KeyMacGridData81>
       <KeyMacGridData82>VSS,-,-,,</KeyMacGridData82>
       <KeyMacGridData83>EVSS0,-,-,,</KeyMacGridData83>
       <KeyMacGridData84>VDD,-,-,,</KeyMacGridData84>
       <KeyMacGridData85>EVDD0,-,-,,</KeyMacGridData85>
-      <KeyMacGridData86>Free,-,-,,</KeyMacGridData86>
-      <KeyMacGridData87>Free,-,-,,</KeyMacGridData87>
+      <KeyMacGridData86>SCLA0,O,-,,</KeyMacGridData86>
+      <KeyMacGridData87>SDAA0,I/O,-,,</KeyMacGridData87>
       <KeyMacGridData88>Free,-,-,,</KeyMacGridData88>
       <KeyMacGridData89>Free,-,-,,</KeyMacGridData89>
       <KeyMacGridData90>Free,-,-,,</KeyMacGridData90>
-      <KeyMacGridData91>Free,-,-,,</KeyMacGridData91>
-      <KeyMacGridData92>Free,-,-,,</KeyMacGridData92>
-      <KeyMacGridData93>Free,-,-,,</KeyMacGridData93>
-      <KeyMacGridData94>Free,-,-,,</KeyMacGridData94>
-      <KeyMacGridData95>P73,I,-,,</KeyMacGridData95>
-      <KeyMacGridData96>P72,I,-,,</KeyMacGridData96>
-      <KeyMacGridData97>P71,O,No,,</KeyMacGridData97>
-      <KeyMacGridData98>P70,O,-,,</KeyMacGridData98>
-      <KeyMacGridData99>TI06,I,-,,</KeyMacGridData99>
-      <KeyMacGridData100>P05,O,-,,</KeyMacGridData100>
-      <KeyMacGridData101>P30,O,-,,</KeyMacGridData101>
-      <KeyMacGridData102>P50,O,No,,</KeyMacGridData102>
-      <KeyMacGridData103>P51,O,-,,</KeyMacGridData103>
+      <KeyMacGridData91>P77,I,-,,</KeyMacGridData91>
+      <KeyMacGridData92>P76,I,-,,</KeyMacGridData92>
+      <KeyMacGridData93>P75,I,-,,</KeyMacGridData93>
+      <KeyMacGridData94>P74,I,-,,</KeyMacGridData94>
+      <KeyMacGridData95>Free,-,-,,</KeyMacGridData95>
+      <KeyMacGridData96>Free,-,-,,</KeyMacGridData96>
+      <KeyMacGridData97>P71,I,-,,</KeyMacGridData97>
+      <KeyMacGridData98>P70,I,-,,</KeyMacGridData98>
+      <KeyMacGridData99>Free,-,-,,</KeyMacGridData99>
+      <KeyMacGridData100>Free,-,-,,</KeyMacGridData100>
+      <KeyMacGridData101>Free,-,-,,</KeyMacGridData101>
+      <KeyMacGridData102>Free,-,-,,</KeyMacGridData102>
+      <KeyMacGridData103>Free,-,-,,</KeyMacGridData103>
       <KeyMacGridData104>P52,O,No,,</KeyMacGridData104>
-      <KeyMacGridData105>P53,O,No,,</KeyMacGridData105>
+      <KeyMacGridData105>Free,-,-,,</KeyMacGridData105>
       <KeyMacGridData106>P54,O,No,,</KeyMacGridData106>
-      <KeyMacGridData107>P55,O,No,,</KeyMacGridData107>
+      <KeyMacGridData107>Free,-,-,,</KeyMacGridData107>
       <KeyMacGridData108>Free,-,-,,</KeyMacGridData108>
-      <KeyMacGridData109>Free,-,-,,</KeyMacGridData109>
+      <KeyMacGridData109>P16,O,-,,</KeyMacGridData109>
       <KeyMacGridData110>Free,-,-,,</KeyMacGridData110>
       <KeyMacGridData111>RxD2,I,-,,</KeyMacGridData111>
       <KeyMacGridData112>TxD2,O,No,,</KeyMacGridData112>
       <KeyMacGridData113>TxD0,O,No,,</KeyMacGridData113>
       <KeyMacGridData114>RxD0,I,-,,</KeyMacGridData114>
-      <KeyMacGridData115>Free,-,-,,</KeyMacGridData115>
-      <KeyMacGridData116>Free,-,-,,</KeyMacGridData116>
-      <KeyMacGridData117>Free,-,-,,</KeyMacGridData117>
-      <KeyMacGridData118>Free,-,-,,</KeyMacGridData118>
-      <KeyMacGridData119>Free,-,-,,</KeyMacGridData119>
-      <KeyMacGridData120>Free,-,-,,</KeyMacGridData120>
-      <KeyMacGridData121>Free,-,-,,</KeyMacGridData121>
+      <KeyMacGridData115>P10,O,No,,</KeyMacGridData115>
+      <KeyMacGridData116>P146,O,-,,</KeyMacGridData116>
+      <KeyMacGridData117>P147,O,-,,</KeyMacGridData117>
+      <KeyMacGridData118>ANI7,I,-,,</KeyMacGridData118>
+      <KeyMacGridData119>ANI6,I,-,,</KeyMacGridData119>
+      <KeyMacGridData120>ANI5,I,-,,</KeyMacGridData120>
+      <KeyMacGridData121>ANI4,I,-,,</KeyMacGridData121>
       <KeyMacGridData122>ANI3,I,-,,</KeyMacGridData122>
       <KeyMacGridData123>ANI2,I,-,,</KeyMacGridData123>
       <KeyMacGridData124>ANI1,I,-,,</KeyMacGridData124>
       <KeyMacGridData125>ANI0,I,-,,</KeyMacGridData125>
       <KeyMacGridData126>Free,-,-,,</KeyMacGridData126>
       <KeyMacGridData127>Free,-,-,,</KeyMacGridData127>
-      <KeyMacGridData128>Free,-,-,,</KeyMacGridData128>
-      <KeyMacGridData129>Free,-,-,,</KeyMacGridData129>
+      <KeyMacGridData128>RxD1,I,-,,</KeyMacGridData128>
+      <KeyMacGridData129>TxD1,O,No,,</KeyMacGridData129>
       <KeyMacGridData130>Free,-,-,,</KeyMacGridData130>
       <KeyMacGridData131>Free,-,-,,</KeyMacGridData131>
-      <KeyMacGridData132>Free,-,-,,</KeyMacGridData132>
+      <KeyMacGridData132>P141,I,-,,</KeyMacGridData132>
       <KeyMacGridData133>Free,-,-,,</KeyMacGridData133>
       <KeyMacGridData134>Free,-,-,,</KeyMacGridData134>
-      <KeyMacGridData135>P30,O,-,,</KeyMacGridData135>
-      <KeyMacGridData136>P55,O,No,,</KeyMacGridData136>
-      <KeyMacGridData137>Free,-,-,,</KeyMacGridData137>
+      <KeyMacGridData135>Free,-,-,,</KeyMacGridData135>
+      <KeyMacGridData136>Free,-,-,,</KeyMacGridData136>
+      <KeyMacGridData137>P141,I,-,,</KeyMacGridData137>
       <KeyMacGridData138>Free,-,-,,</KeyMacGridData138>
-      <KeyMacGridData139>Free,-,-,,</KeyMacGridData139>
-      <KeyMacGridData140>Free,-,-,,</KeyMacGridData140>
-      <KeyMacGridData141>P73,I,-,,</KeyMacGridData141>
-      <KeyMacGridData142>P30,O,-,,</KeyMacGridData142>
-      <KeyMacGridData143>P50,O,No,,</KeyMacGridData143>
-      <KeyMacGridData144>P51,O,-,,</KeyMacGridData144>
-      <KeyMacGridData145>P55,O,No,,</KeyMacGridData145>
+      <KeyMacGridData139>P75,I,-,,</KeyMacGridData139>
+      <KeyMacGridData140>P74,I,-,,</KeyMacGridData140>
+      <KeyMacGridData141>Free,-,-,,</KeyMacGridData141>
+      <KeyMacGridData142>Free,-,-,,</KeyMacGridData142>
+      <KeyMacGridData143>Free,-,-,,</KeyMacGridData143>
+      <KeyMacGridData144>Free,-,-,,</KeyMacGridData144>
+      <KeyMacGridData145>Free,-,-,,</KeyMacGridData145>
       <KeyMacGridData146>Free,-,-,,</KeyMacGridData146>
-      <KeyMacGridData147>Free,-,-,,</KeyMacGridData147>
+      <KeyMacGridData147>P16,O,-,,</KeyMacGridData147>
       <KeyMacGridData148>TxD0,O,No,,</KeyMacGridData148>
       <KeyMacGridData149>RxD0,I,-,,</KeyMacGridData149>
-      <KeyMacGridData150>Free,-,-,,</KeyMacGridData150>
+      <KeyMacGridData150>P10,O,No,,</KeyMacGridData150>
       <KeyMacGridData151>Free,-,-,,</KeyMacGridData151>
-      <KeyMacGridData152>Free,-,-,,</KeyMacGridData152>
-      <KeyMacGridData153>Free,-,-,,</KeyMacGridData153>
+      <KeyMacGridData152>RxD1,I,-,,</KeyMacGridData152>
+      <KeyMacGridData153>TxD1,O,No,,</KeyMacGridData153>
       <KeyMacGridData154>TOOL0,I/O,-,,</KeyMacGridData154>
-      <KeyMacGridData155>Free,-,-,,</KeyMacGridData155>
-      <KeyMacGridData156>Free,-,-,,</KeyMacGridData156>
+      <KeyMacGridData155>P42,I,-,,</KeyMacGridData155>
+      <KeyMacGridData156>P41,I,-,,</KeyMacGridData156>
       <KeyMacGridData157>Free,-,-,,</KeyMacGridData157>
-      <KeyMacGridData158>TI06,I,-,,</KeyMacGridData158>
-      <KeyMacGridData159>P05,O,-,,</KeyMacGridData159>
+      <KeyMacGridData158>Free,-,-,,</KeyMacGridData158>
+      <KeyMacGridData159>Free,-,-,,</KeyMacGridData159>
       <KeyMacGridData160>Free,-,-,,</KeyMacGridData160>
-      <KeyMacGridData161>Free,-,-,,</KeyMacGridData161>
+      <KeyMacGridData161>P16,O,-,,</KeyMacGridData161>
       <KeyMacGridData162>Free,-,-,,</KeyMacGridData162>
       <KeyMacGridData163>RxD2,I,-,,</KeyMacGridData163>
       <KeyMacGridData164>TxD2,O,No,,</KeyMacGridData164>
       <KeyMacGridData165>TxD0,O,No,,</KeyMacGridData165>
       <KeyMacGridData166>RxD0,I,-,,</KeyMacGridData166>
-      <KeyMacGridData167>Free,-,-,,</KeyMacGridData167>
+      <KeyMacGridData167>P10,O,No,,</KeyMacGridData167>
       <KeyMacGridData168>Free,-,-,,</KeyMacGridData168>
       <KeyMacGridData169>Free,-,-,,</KeyMacGridData169>
       <KeyMacGridData170>Free,-,-,,</KeyMacGridData170>
       <KeyMacGridData171>Free,-,-,,</KeyMacGridData171>
-      <KeyMacGridData172>Free,-,-,,</KeyMacGridData172>
-      <KeyMacGridData173>Free,-,-,,</KeyMacGridData173>
-      <KeyMacGridData174>Free,-,-,,</KeyMacGridData174>
-      <KeyMacGridData175>Free,-,-,,</KeyMacGridData175>
-      <KeyMacGridData176>P30,O,-,,</KeyMacGridData176>
-      <KeyMacGridData177>P50,O,No,,</KeyMacGridData177>
-      <KeyMacGridData178>P51,O,-,,</KeyMacGridData178>
+      <KeyMacGridData172>P77,I,-,,</KeyMacGridData172>
+      <KeyMacGridData173>P76,I,-,,</KeyMacGridData173>
+      <KeyMacGridData174>P75,I,-,,</KeyMacGridData174>
+      <KeyMacGridData175>P74,I,-,,</KeyMacGridData175>
+      <KeyMacGridData176>Free,-,-,,</KeyMacGridData176>
+      <KeyMacGridData177>Free,-,-,,</KeyMacGridData177>
+      <KeyMacGridData178>Free,-,-,,</KeyMacGridData178>
       <KeyMacGridData179>P52,O,No,,</KeyMacGridData179>
-      <KeyMacGridData180>P53,O,No,,</KeyMacGridData180>
-      <KeyMacGridData181>Free,-,-,,</KeyMacGridData181>
+      <KeyMacGridData180>Free,-,-,,</KeyMacGridData180>
+      <KeyMacGridData181>P16,O,-,,</KeyMacGridData181>
       <KeyMacGridData182>TxD0,O,No,,</KeyMacGridData182>
-      <KeyMacGridData183>Free,-,-,,</KeyMacGridData183>
+      <KeyMacGridData183>P141,I,-,,</KeyMacGridData183>
       <KeyMacGridData184>Free,-,-,,</KeyMacGridData184>
-      <KeyMacGridData185>ANI19,I,-,,</KeyMacGridData185>
-      <KeyMacGridData186>Free,-,-,,</KeyMacGridData186>
-      <KeyMacGridData187>Free,-,-,,</KeyMacGridData187>
-      <KeyMacGridData188>Free,-,-,,</KeyMacGridData188>
-      <KeyMacGridData189>Free,-,-,,</KeyMacGridData189>
-      <KeyMacGridData190>Free,-,-,,</KeyMacGridData190>
+      <KeyMacGridData185>Free,-,-,,</KeyMacGridData185>
+      <KeyMacGridData186>P147,O,-,,</KeyMacGridData186>
+      <KeyMacGridData187>ANI7,I,-,,</KeyMacGridData187>
+      <KeyMacGridData188>ANI6,I,-,,</KeyMacGridData188>
+      <KeyMacGridData189>ANI5,I,-,,</KeyMacGridData189>
+      <KeyMacGridData190>ANI4,I,-,,</KeyMacGridData190>
       <KeyMacGridData191>ANI3,I,-,,</KeyMacGridData191>
       <KeyMacGridData192>ANI2,I,-,,</KeyMacGridData192>
       <KeyMacGridData193>ANI1,I,-,,</KeyMacGridData193>
       <KeyMacGridData194>ANI0,I,-,,</KeyMacGridData194>
-      <KeyMacGridData195>Free,-,-,,</KeyMacGridData195>
-      <KeyMacGridData196>Free,-,-,,</KeyMacGridData196>
-      <KeyMacGridData197>Free,-,-,,</KeyMacGridData197>
-      <KeyMacGridData198>Free,-,-,,</KeyMacGridData198>
-      <KeyMacGridData199>Free,-,-,,</KeyMacGridData199>
-      <KeyMacGridData200>Free,-,-,,</KeyMacGridData200>
-      <KeyMacGridData201>P73,I,-,,</KeyMacGridData201>
-      <KeyMacGridData202>P72,I,-,,</KeyMacGridData202>
-      <KeyMacGridData203>P71,O,No,,</KeyMacGridData203>
-      <KeyMacGridData204>P70,O,-,,</KeyMacGridData204>
-      <KeyMacGridData205>Free,-,-,,</KeyMacGridData205>
-      <KeyMacGridData206>Free,-,-,,</KeyMacGridData206>
+      <KeyMacGridData195>RxD1,I,-,,</KeyMacGridData195>
+      <KeyMacGridData196>TxD1,O,No,,</KeyMacGridData196>
+      <KeyMacGridData197>P77,I,-,,</KeyMacGridData197>
+      <KeyMacGridData198>P76,I,-,,</KeyMacGridData198>
+      <KeyMacGridData199>P75,I,-,,</KeyMacGridData199>
+      <KeyMacGridData200>P74,I,-,,</KeyMacGridData200>
+      <KeyMacGridData201>Free,-,-,,</KeyMacGridData201>
+      <KeyMacGridData202>Free,-,-,,</KeyMacGridData202>
+      <KeyMacGridData203>P71,I,-,,</KeyMacGridData203>
+      <KeyMacGridData204>P70,I,-,,</KeyMacGridData204>
+      <KeyMacGridData205>SCLA0,O,-,,</KeyMacGridData205>
+      <KeyMacGridData206>SDAA0,I/O,-,,</KeyMacGridData206>
       <KeyMacGridData207>Free,-,-,,</KeyMacGridData207>
       <KeyMacGridData208>Free,-,-,,</KeyMacGridData208>
-      <KeyMacGridData209>Free,-,-,,</KeyMacGridData209>
-      <KeyMacGridData210>Free,-,-,,</KeyMacGridData210>
-      <KeyMacGridData211>Free,-,-,,</KeyMacGridData211>
+      <KeyMacGridData209>P146,O,-,,</KeyMacGridData209>
+      <KeyMacGridData210>P147,O,-,,</KeyMacGridData210>
+      <KeyMacGridData211>P141,I,-,,</KeyMacGridData211>
       <KeyMacGridData212>Free,-,-,,</KeyMacGridData212>
-      <KeyMacGridData213>Free,-,-,,</KeyMacGridData213>
+      <KeyMacGridData213>P124,I,-,,</KeyMacGridData213>
       <KeyMacGridData214>Free,-,-,,</KeyMacGridData214>
-      <KeyMacGridData215>Free,-,-,,</KeyMacGridData215>
+      <KeyMacGridData215>P122,I,-,,</KeyMacGridData215>
       <KeyMacGridData216>Free,-,-,,</KeyMacGridData216>
       <KeyPinGridLayout>&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
 &lt;SOAP-ENV:Body&gt;
@@ -2591,6 +2591,7 @@ source
 &lt;CellActivation&gt;3&lt;/CellActivation&gt;
 &lt;Header href="#ref-62"/&gt;
 &lt;Key id="ref-63"&gt;Recommend Connection for Unused&lt;/Key&gt;
+&lt;Width&gt;198&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;/a1:UltraGridColumn&gt;
 &lt;a1:UltraGridColumn id="ref-42" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinGrid/Infragistics4.Win.UltraWinGrid.v12.2"&gt;
@@ -2983,6 +2984,7 @@ source
 &lt;Header href="#ref-57"/&gt;
 &lt;Hidden&gt;true&lt;/Hidden&gt;
 &lt;Key id="ref-58"&gt;fldParentID&lt;/Key&gt;
+&lt;Width&gt;92&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;ExcludeFromColumnChooser&gt;1&lt;/ExcludeFromColumnChooser&gt;
 &lt;/a1:UltraGridColumn&gt;
@@ -3025,6 +3027,7 @@ source
 &lt;Header href="#ref-70"/&gt;
 &lt;Hidden&gt;true&lt;/Hidden&gt;
 &lt;Key id="ref-71"&gt;MacroGroupName&lt;/Key&gt;
+&lt;Width&gt;115&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;ExcludeFromColumnChooser&gt;1&lt;/ExcludeFromColumnChooser&gt;
 &lt;/a1:UltraGridColumn&gt;
@@ -3044,6 +3047,7 @@ source
 &lt;Header href="#ref-73"/&gt;
 &lt;Hidden&gt;true&lt;/Hidden&gt;
 &lt;Key href="#ref-58"/&gt;
+&lt;Width&gt;92&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;ExcludeFromColumnChooser&gt;1&lt;/ExcludeFromColumnChooser&gt;
 &lt;/a1:UltraGridColumn&gt;
@@ -3114,6 +3118,7 @@ source
 &lt;CellActivation&gt;3&lt;/CellActivation&gt;
 &lt;Header href="#ref-92"/&gt;
 &lt;Key id="ref-93"&gt;Recommend Connection for Unused&lt;/Key&gt;
+&lt;Width&gt;198&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;/a1:UltraGridColumn&gt;
 &lt;a1:UltraGridColumn id="ref-55" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinGrid/Infragistics4.Win.UltraWinGrid.v12.2"&gt;
@@ -3543,6 +3548,7 @@ source
 &lt;Header href="#ref-51"/&gt;
 &lt;Hidden&gt;true&lt;/Hidden&gt;
 &lt;Key id="ref-52"&gt;relation&lt;/Key&gt;
+&lt;Width&gt;92&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;ExcludeFromColumnChooser&gt;1&lt;/ExcludeFromColumnChooser&gt;
 &lt;/a1:UltraGridColumn&gt;
@@ -3571,6 +3577,7 @@ source
 &lt;Header href="#ref-59"/&gt;
 &lt;Hidden&gt;true&lt;/Hidden&gt;
 &lt;Key href="#ref-52"/&gt;
+&lt;Width&gt;92&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;ExcludeFromColumnChooser&gt;1&lt;/ExcludeFromColumnChooser&gt;
 &lt;/a1:UltraGridColumn&gt;
@@ -3641,6 +3648,7 @@ source
 &lt;CellActivation&gt;3&lt;/CellActivation&gt;
 &lt;Header href="#ref-78"/&gt;
 &lt;Key id="ref-79"&gt;Recommend Connection for Unused&lt;/Key&gt;
+&lt;Width&gt;198&lt;/Width&gt;
 &lt;IsBound&gt;true&lt;/IsBound&gt;
 &lt;/a1:UltraGridColumn&gt;
 &lt;a1:UltraGridColumn id="ref-50" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinGrid/Infragistics4.Win.UltraWinGrid.v12.2"&gt;
@@ -3720,9 +3728,9 @@ source
 &lt;/SOAP-ENV:Body&gt;
 &lt;/SOAP-ENV:Envelope&gt;
 </KeyExtGridLayout>
-      <KeyTopViewZoom />
-      <KeyTopViewAngle />
-      <KeyTopViewPartsCollapsed />
+      <KeyTopViewZoom>1</KeyTopViewZoom>
+      <KeyTopViewAngle>0</KeyTopViewAngle>
+      <KeyTopViewPartsCollapsed>False</KeyTopViewPartsCollapsed>
       <KEY_SAVE_ALLOCATED_FUNCTION>True</KEY_SAVE_ALLOCATED_FUNCTION>
       <KEY_SAVE_ALLOCATED_FUNCTION_TERMINAL_NUMBER_COLLECTION>21,22,23,35,36,38,39,40,41,42,43,44,45,46</KEY_SAVE_ALLOCATED_FUNCTION_TERMINAL_NUMBER_COLLECTION>
       <KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION21>21,P31,TI03,TO03,INTP4</KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION21>
@@ -3740,11 +3748,11 @@ source
       <KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION45>45,P11,SI00,RxD0,TOOLRxD,SDA00</KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION45>
       <KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION46>46,P10,_SCK00,SCL00</KEY_SAVE_ALLOCATED_FCUNTION_COLLECTION46>
       <KEY_SAVE_DEVICE_PIN_LIST_ZOOM>100</KEY_SAVE_DEVICE_PIN_LIST_ZOOM>
-      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:230:230,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:198:210,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:92:98,1:245:245,2:42:42,3:44:44,4:121:121,5:115:120,6:84:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:92:98,1:77:77,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:92:98,1:100:100,2:43:43,3:144:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:92:98,1:78:78,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:230:230,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:198:198,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:92:92,1:245:245,2:42:42,3:44:44,4:121:121,5:115:115,6:84:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:92:92,1:77:77,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:198,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:92:92,1:100:100,2:43:43,3:144:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:92:92,1:78:78,2:77:77,3:230:230,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:198,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
       <KEY_SAVE_CREATED_PROJECT_DATA>True</KEY_SAVE_CREATED_PROJECT_DATA>
       <KEY_SAVE_DEVICE_CHANGED_COUNTER>0</KEY_SAVE_DEVICE_CHANGED_COUNTER>
     </Instance>
@@ -4015,7 +4023,7 @@ source
     &lt;PIOR4Value Name="PIOR4Value" Text="0" /&gt;
     &lt;PIOR5Value Name="PIOR5Value" Text="0" /&gt;
     &lt;ProjectName Name="PrjName" Text="Jason-002" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="C:\Users\tseng\Desktop\Jason-002\working" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="C:\Users\tseng\Desktop\github\JA-002" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78G13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78G13_64pin" /&gt;
@@ -4073,13 +4081,13 @@ source
       &lt;/CGC&gt;
       &lt;PORT&gt;
         &lt;Port0 Chip="RL78G13_64pin,RL78G13_80pin" Pullup="true"&gt;
-          &lt;P00 Name="P00/TI00" Nch="true" AltFunc="P00" Point="I/O" /&gt;
-          &lt;P01 Name="P01/TO00" AltFunc="P01" TTL="true" Point="I/O" /&gt;
+          &lt;P00 Name="P00/TI00" Nch="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P01 Name="P01/TO00" AltFunc="" TTL="true" Point="I/O" /&gt;
           &lt;P02 Name="P02/ANI17/SO10/TXD1" DIN="true" Nch="true" AltFunc="TXD1" Point="I/O" /&gt;
           &lt;P03 Name="P03/ANI16/SI10/RXD1/SDA10" Nch="true" DIN="true" TTL="true" AltFunc="RXD1" Point="I/O" /&gt;
-          &lt;P04 Name="P04/_SCK10/SCL10" TTL="true" Nch="true" AltFunc="P04" Point="I/O" /&gt;
-          &lt;P05 Name="P05/TI05/TO05" AltFunc="P05" Point="I/O" /&gt;
-          &lt;P06 Name="P06/TI06/TO06" AltFunc="P06" Point="I/O" /&gt;
+          &lt;P04 Name="P04/_SCK10/SCL10" TTL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P05 Name="P05/TI05/TO05" AltFunc="" Point="I/O" /&gt;
+          &lt;P06 Name="P06/TI06/TO06" AltFunc="" Point="I/O" /&gt;
         &lt;/Port0&gt;
         &lt;Port1 Chip="RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Pullup="true"&gt;
           &lt;P10 Name="P10/_SCK00/SCL00" TTL="true" Nch="true" AltFunc="P10" Point="I/O" /&gt;
@@ -4087,7 +4095,7 @@ source
           &lt;P12 Name="P12/SO00/TXD0/TOOLTXD" Nch="true" AltFunc="TXD0" Point="I/O" /&gt;
           &lt;P13 Name="P13/TXD2/SO20" TTL="true" Nch="true" AltFunc="TXD2" Point="I/O" /&gt;
           &lt;P14 Name="P14/RXD2/SI20/SDA20" TTL="true" Nch="true" AltFunc="RXD2" Point="I/O" /&gt;
-          &lt;P15 Chip="RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P15/_SCK20/SCL20" TTL="true" Nch="true" AltFunc="P15" Point="I/O" /&gt;
+          &lt;P15 Chip="RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P15/_SCK20/SCL20" TTL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
           &lt;P16 Name="P16/TI01/TO01/INTP5" TTL="true" AltFunc="P16" Point="I/O" /&gt;
           &lt;P17 Name="P17/TI02/TO02" TTL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
         &lt;/Port1&gt;
@@ -4102,8 +4110,8 @@ source
           &lt;P27 Chip="RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P27/ANI7" AltFunc="ANALOG_7" Point="I/O" /&gt;
         &lt;/Port2&gt;
         &lt;Port3 Pullup="true"&gt;
-          &lt;P30 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin" Name="P30/INTP3/RTC1HZ/_SCK11/SCL11" AltFunc="P30" Point="I/O" /&gt;
-          &lt;P31 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P31/TI03/TO03/INTP4" AltFunc="P31" Point="I/O" /&gt;
+          &lt;P30 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin" Name="P30/INTP3/RTC1HZ/_SCK11/SCL11" AltFunc="" Point="I/O" /&gt;
+          &lt;P31 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P31/TI03/TO03/INTP4" AltFunc="" Point="I/O" /&gt;
         &lt;/Port3&gt;
         &lt;Port4 Pullup="true"&gt;
           &lt;P40 Name="P40/TOOL0" AltFunc="TOOL0" Point="I/O" /&gt;
@@ -4112,45 +4120,45 @@ source
           &lt;P43 Chip="RL78G13_64pin" Name="P43" AltFunc="P43" Point="I/O" /&gt;
         &lt;/Port4&gt;
         &lt;Port5 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Pullup="true"&gt;
-          &lt;P50 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin" Nch="true" Name="P50/INTP1/SI11/SDA11" AltFunc="P50" Point="I/O" /&gt;
-          &lt;P51 Chip="RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin" Name="P51/INTP2/SO11" AltFunc="P51" Point="I/O" /&gt;
+          &lt;P50 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin" Nch="true" Name="P50/INTP1/SI11/SDA11" AltFunc="" Point="I/O" /&gt;
+          &lt;P51 Chip="RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin" Name="P51/INTP2/SO11" AltFunc="" Point="I/O" /&gt;
           &lt;P52 Chip="RL78G13_64pin" Name="P52" AltFunc="P52" Point="I/O" /&gt;
-          &lt;P53 Chip="RL78G13_64pin" Name="P53" AltFunc="P53" Point="I/O" /&gt;
+          &lt;P53 Chip="RL78G13_64pin" Name="P53" AltFunc="" Point="I/O" /&gt;
           &lt;P54 Chip="RL78G13_64pin" Name="P54" AltFunc="P54" Point="I/O" /&gt;
-          &lt;P55 Chip="RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" TTL="true" Nch="true" Name="P55" AltFunc="P55" Point="I/O" /&gt;
+          &lt;P55 Chip="RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" TTL="true" Nch="true" Name="P55" AltFunc="" Point="I/O" /&gt;
         &lt;/Port5&gt;
         &lt;Port6 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin"&gt;
           &lt;P60 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P60/SCLA0" AltFunc="SCLA0" Point="I/O" /&gt;
           &lt;P61 Chip="RL78G13_24pin,RL78G13_25pin,RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P61/SDAA0" AltFunc="SDAA0" Point="I/O" /&gt;
-          &lt;P62 Chip="RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P62" AltFunc="P62" Point="I/O" /&gt;
-          &lt;P63 Chip="RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P63" AltFunc="P63" Point="I/O" /&gt;
+          &lt;P62 Chip="RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P62" AltFunc="" Point="I/O" /&gt;
+          &lt;P63 Chip="RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P63" AltFunc="" Point="I/O" /&gt;
         &lt;/Port6&gt;
         &lt;Port7 Chip="RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Pullup="true"&gt;
           &lt;P70 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P70/KR0/_SCK21/SCL21" AltFunc="P70" Point="I/O" /&gt;
           &lt;P71 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P71/KR1/SI21/SDA21" Nch="true" AltFunc="P71" Point="I/O" /&gt;
-          &lt;P72 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P72/KR2/SO21" AltFunc="P72" Point="I/O" /&gt;
-          &lt;P73 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P73/KR3/SO01" AltFunc="P73" Point="I/O" /&gt;
+          &lt;P72 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P72/KR2/SO21" AltFunc="" Point="I/O" /&gt;
+          &lt;P73 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P73/KR3/SO01" AltFunc="" Point="I/O" /&gt;
           &lt;P74 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P74/KR4/INTP8/SI01/SDA01" Nch="true" AltFunc="P74" Point="I/O" /&gt;
           &lt;P75 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin" Name="P75/KR5/INTP9/_SCK01/SCL01" AltFunc="P75" Point="I/O" /&gt;
           &lt;P76 Chip="RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P76/KR6/INTP10" AltFunc="P76" Point="I/O" /&gt;
           &lt;P77 Chip="RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P77/KR7/INTP11" AltFunc="P77" Point="I/O" /&gt;
         &lt;/Port7&gt;
         &lt;Port12&gt;
-          &lt;P120 Chip="RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P120/ANI19" DIN="true" Pullup="true" AltFunc="P120" Point="I/O" /&gt;
-          &lt;P121 Name="P121/X1" AltFunc="P121" Point="I" /&gt;
+          &lt;P120 Chip="RL78G13_30pin,RL78G13_32pin,RL78G13_36pin,RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P120/ANI19" DIN="true" Pullup="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P121 Name="P121/X1" AltFunc="" Point="I" /&gt;
           &lt;P122 Name="P122/X2/EXCLK" AltFunc="P122" Point="I" /&gt;
-          &lt;P123 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P123/XT1" AltFunc="P123" Point="I" /&gt;
+          &lt;P123 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P123/XT1" AltFunc="" Point="I" /&gt;
           &lt;P124 Chip="RL78G13_40pin,RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P124/XT2/EXCLKS" AltFunc="P124" Point="I" /&gt;
         &lt;/Port12&gt;
         &lt;Port13&gt;
-          &lt;P130 Chip="RL78G13_25pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P130" AltFunc="P130" Point="O" /&gt;
-          &lt;P137 Name="P137/INTP0" AltFunc="P137" Point="I" /&gt;
+          &lt;P130 Chip="RL78G13_25pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P130" AltFunc="" Point="O" /&gt;
+          &lt;P137 Name="P137/INTP0" AltFunc="" Point="I" /&gt;
         &lt;/Port13&gt;
         &lt;Port14 Pullup="true"&gt;
-          &lt;P140 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P140/PCLBUZ0/INTP6" AltFunc="P140" Point="I/O" /&gt;
+          &lt;P140 Chip="RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P140/PCLBUZ0/INTP6" AltFunc="" Point="I/O" /&gt;
           &lt;P141 Chip="RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P141/PCLBUZ1/INTP7" AltFunc="P141" Point="I/O" /&gt;
           &lt;P146 Chip="RL78G13_44pin,RL78G13_48pin,RL78G13_52pin,RL78G13_64pin,RL78G13_80pin,RL78G13_100pin,RL78G13_128pin" Name="P146" AltFunc="P146" Point="I/O" /&gt;
-          &lt;P147 Name="P147/ANI18" DIN="true" AltFunc="ANI18" Point="I/O" /&gt;
+          &lt;P147 Name="P147/ANI18" DIN="true" AltFunc="P147" Point="I/O" /&gt;
         &lt;/Port14&gt;
       &lt;/PORT&gt;
       &lt;INTC&gt;
@@ -5153,7 +5161,7 @@ source
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="0FE00" /&gt;
+        &lt;rrm Name="rrm" Value="0FE00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
@@ -5164,14 +5172,14 @@ source
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;df_waittime Name="df_waittime" Value="6" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="0FE00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;lvi_option Name="lvi_option" Value="73" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FF" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="0FE00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;
@@ -5296,14 +5304,14 @@ source
     &lt;PORT&gt;
       &lt;PortP0&gt;
         &lt;P00&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P00&gt;
         &lt;P01&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5324,21 +5332,21 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P03&gt;
         &lt;P04&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P04&gt;
         &lt;P05&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P05&gt;
         &lt;P06&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5382,7 +5390,7 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P14&gt;
         &lt;P15&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5463,14 +5471,14 @@ source
       &lt;/PortP2&gt;
       &lt;PortP3&gt;
         &lt;P30&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P30&gt;
         &lt;P31&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5509,14 +5517,14 @@ source
       &lt;/PortP4&gt;
       &lt;PortP5&gt;
         &lt;P50&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P50&gt;
         &lt;P51&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5530,7 +5538,7 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P52&gt;
         &lt;P53&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5544,7 +5552,7 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P54&gt;
         &lt;P55&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5569,14 +5577,14 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P61&gt;
         &lt;P62&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P62&gt;
         &lt;P63&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5585,57 +5593,57 @@ source
       &lt;/PortP6&gt;
       &lt;PortP7&gt;
         &lt;P70&gt;
-          &lt;setting name="Operation" value="output" /&gt;
-          &lt;setting name="Pull_up" value="unused" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P70&gt;
         &lt;P71&gt;
-          &lt;setting name="Operation" value="output" /&gt;
-          &lt;setting name="Pull_up" value="unused" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P71&gt;
         &lt;P72&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P72&gt;
         &lt;P73&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P73&gt;
         &lt;P74&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P74&gt;
         &lt;P75&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P75&gt;
         &lt;P76&gt;
-          &lt;setting name="Operation" value="output" /&gt;
-          &lt;setting name="Pull_up" value="unused" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P76&gt;
         &lt;P77&gt;
-          &lt;setting name="Operation" value="output" /&gt;
-          &lt;setting name="Pull_up" value="unused" /&gt;
+          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
@@ -5643,14 +5651,14 @@ source
       &lt;/PortP7&gt;
       &lt;PortP12&gt;
         &lt;P120&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P120&gt;
         &lt;P121&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5664,7 +5672,7 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P122&gt;
         &lt;P123&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5680,14 +5688,14 @@ source
       &lt;/PortP12&gt;
       &lt;PortP13&gt;
         &lt;P130&gt;
-          &lt;setting name="Operation" value="output" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P130&gt;
         &lt;P137&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5696,7 +5704,7 @@ source
       &lt;/PortP13&gt;
       &lt;PortP14&gt;
         &lt;P140&gt;
-          &lt;setting name="Operation" value="input" /&gt;
+          &lt;setting name="Operation" value="unused" /&gt;
           &lt;setting name="Pull_up" value="unused" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5717,7 +5725,7 @@ source
           &lt;setting name="Output_value" value="0" /&gt;
         &lt;/P146&gt;
         &lt;P147&gt;
-          &lt;setting name="Operation" value="unused" /&gt;
+          &lt;setting name="Operation" value="output" /&gt;
           &lt;setting name="Pull_up" value="used" /&gt;
           &lt;setting name="TTL_buffer" value="unused" /&gt;
           &lt;setting name="N-ch_open-drain" value="unused" /&gt;
@@ -5922,7 +5930,7 @@ source
       &lt;setting name="InputPinsAttach" value="ANI0 - ANI7" /&gt;
       &lt;setting name="AD_Inputpin16" value="unused" /&gt;
       &lt;setting name="AD_Inputpin17" value="unused" /&gt;
-      &lt;setting name="AD_Inputpin18" value="used" /&gt;
+      &lt;setting name="AD_Inputpin18" value="unused" /&gt;
       &lt;setting name="AD_Inputpin19" value="unused" /&gt;
       &lt;setting name="AD_Inputpin20" value="unused" /&gt;
       &lt;setting name="AD_Inputpin21" value="unused" /&gt;

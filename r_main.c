@@ -14,16 +14,16 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_main.c
-* Version      : CodeGenerator for RL78/G13 V2.05.04.02 [20 Nov 2019]
+* Version      : CodeGenerator for RL78/G13 V2.05.05.01 [25 Nov 2020]
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements main function.
-* Creation Date: 2021/5/16
+* Creation Date: 2021/6/9
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -68,8 +68,7 @@ extern	uint8_t	LED_mode_count,key_repeart_timer;
 
 
 
-uint16_t	get_V_A_timer,V_A_count,voltage_data_now,voltage_data_max,voltage_data_m1,voltage_data_min
-				,current_data_now,current_data_max,current_data_m1,current_data_min,current_key_now;
+uint16_t	get_V_A_timer,V_A_count,current_data_now,current_data_max,current_data_m1,current_data_min,current_key_now;
 
 
 //flag_t	_sys_op_statue_,_Error_state_;
@@ -116,7 +115,7 @@ void main(void)
 
 	ms_counter = 0;
 
-	production_mode = SET;
+	production_mode = RESET;
 	Production_mode_count = _PRODUCTION_mode_6;
 	R_IT_Start();
 	R_TAU0_Channel0_Start();  
@@ -141,9 +140,6 @@ void main(void)
 	check_set_temp_setting();
 
 	get_V_A_timer = 0;
-	voltage_data_max = 0;
-	voltage_data_m1 = 0;
-	voltage_data_min = 800;
 	current_data_max = default_0A;
 	current_data_m1 = default_0A;
 	current_data_min = default_0A;
@@ -157,11 +153,6 @@ void main(void)
 /* **************************************************************** */
 		if(get_V_A_timer < 40)				// check 20 ms sec for each 0.5 sec
 		{
-			convert_AD_channel_voltage();
-			if(voltage_data_now > voltage_data_m1)
-				voltage_data_m1 = voltage_data_now;
-			if(voltage_data_now < voltage_data_min)
-				voltage_data_min = voltage_data_now;
 			V_A_count++;
 		}
 		else	if(get_V_A_timer < 80)
@@ -179,9 +170,6 @@ void main(void)
 					{
 						get_V_A_timer = 0;
 						V_A_count =0;
-						voltage_data_max = voltage_data_m1;
-						voltage_data_m1 = 0;
-						voltage_data_min = 800;
 						current_data_max = current_data_m1;
 						current_data_m1 = default_0A;
 						current_data_min = default_0A;
@@ -223,7 +211,7 @@ void R_MAIN_UserInit(void)
 void	check_dip_switch_setting(void)
 {
 	switch_set = 00;
-	if(SWDIP4_3)
+	if(SWDIP4_2)
 	{
 		REMOTE_SW_FUNCTION = SET;
 		switch_set = switch_set | 0x04;
@@ -232,27 +220,8 @@ void	check_dip_switch_setting(void)
 	{
 		REMOTE_SW_FUNCTION = RESET;
 	}
-#if 0	
-	if(SWDIP4_4)
-	{
-		SWDIP4_2_SET = SET;
-	}
-	else
-	{
-		SWDIP4_2_SET = RESET;
-	}
-	
+
 	if(SWDIP4_1)
-	{
-		SYSTEM_SELECT_SWITCH = SET;
-		switch_set = switch_set | 0x01;
-	}
-	else
-	{
-		SYSTEM_SELECT_SWITCH = RESET;
-	}
-#endif	
-	if(SWDIP4_2)
 	{
 		TEMP_SELECT_SWITCH = SET;
 		switch_set = switch_set | 0x02;
