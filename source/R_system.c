@@ -589,7 +589,7 @@ void	sensor_operation(void)
 	}
 	/*****************   PUMP overload    operation  ****************/
 
-#if 0
+#if 1
 	/*****************   WATER_HIGH_TEMP_STOP operation check for 10 sec 0-85 degree ****************/
 	if((CONTROL_TEMP + (int16_t)eeprom_option_byte[_Control_sensor_offset]) > 
 								(uint16_t)eeprom_option_byte[_Liquid_high_temp_stop]*5)
@@ -824,7 +824,7 @@ void	sensor_operation_continue(void)
 		}
 	}
 	/*****************   WATERLEVER_LOW_ALARM  operation  ****************/
-
+#endif
 	/*****************   WATER_HIGH_TEMP_ALARM operation check for 10 sec  ****************/
 	if(current_sys_op_power)     
 	{
@@ -892,6 +892,7 @@ void	sensor_operation_continue(void)
 		}
 	}
 	/*****************  WATER_LOW_TEMP_ALARM operation  ****************/
+#if 0
 	/*****************   Antifrz  operation  Antifrz temp range 0-20, for 1 sec ****************/
 	if(ANTIFRZ_PROTECT_ON != 1)
 	{

@@ -151,8 +151,8 @@ extern 	flag_t	_dip_switch_data_;
 /* *****************   IIC code area ******************************** */
 #define 	SL_ADDR         (0xA0U)         /* Slave address */
 #define 	DATA_LENGTH     (9U)           /* Tx/Rx data length. */
-#define 	RESTART_COUNT   (10U)            /* Restart count value */
-#define 	LOOP_COUNT_VALUE 205            /* loop_count_delay value old value 105 */
+#define 	RESTART_COUNT   (15U)            /* Restart count value */
+#define 	LOOP_COUNT_VALUE 2500           /* loop_count_delay value old value 105 */
 
 
 #define 	IIC_init_address	170			/* init data is 170=55, 171=aa */

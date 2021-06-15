@@ -74,7 +74,7 @@ uint16_t	get_V_A_timer,V_A_count,current_data_now,current_data_max,current_data_
 //flag_t	_sys_op_statue_,_Error_state_;
 flag_t	_dip_switch_data_;
 
-
+uint16_t	test_time_1,test_time_2;
 /**********************************************************************************/
 void	ADC_conver(void);
 void	powerin_test_disp(void);
@@ -134,8 +134,9 @@ void main(void)
 	powerin_test_disp();
 	power_on_timer_reset();
 
+	test_time_1 = ms_counter;
     IIC_check_init();
-
+	test_time_2 = ms_counter;
 	check_dip_switch_setting();
 	check_set_temp_setting();
 

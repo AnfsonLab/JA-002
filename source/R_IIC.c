@@ -34,11 +34,12 @@ static uint8_t com_direction;               /* Communication direction. */
                                             /* 0 : Transmission, 1 : Receiving */
 static uint8_t restart_counter;             /* Restart counter */
 											
-uint8_t loop_counter,option_buffer_check_flag;                   /* Loop counter */
+uint8_t option_buffer_check_flag;                   /* Loop counter */
+uint16_t	loop_counter;
 MD_STATUS iic_status;                   /* IIC status */
 
 
-
+uint8_t count_buf_point,count_buf[256];
 
 int8_t	error_count=0;
 uint8_t	IIC_tx_buf[150];
@@ -380,8 +381,11 @@ void IIC_read_data(void)
                 }
             }
             /* One communication was completed. */
+	count_buf_point = ++count_buf[0];
+	count_buf[count_buf_point]=restart_counter;
 
-    }
+
+}
 
 /***********************************************************************************************************************
 * Function Name: IIC_write_data
@@ -408,6 +412,9 @@ void IIC_write_data(void)
         }
         com_direction  = 0U;                    /* Direction : transmission. */
 
+ 
+
+
             DI();                               /* Disable interrupt */
             TMMK00 = 0U;                        /* Mask release of timer interrupt. */
             /*---------------------------------
@@ -420,6 +427,13 @@ void IIC_write_data(void)
             TMIF00 = 0U;                        /* Clear timer interrupt request. */
             TMMK00 = 1U;                        /* Mask timer interrupt. */
             EI();                               /* Enable interrupt */
+
+			
+			/* Wait about 10us and restart. */
+			for (loop_counter = 0; loop_counter < LOOP_COUNT_VALUE; loop_counter++)
+			{
+				NOP();
+			}
 
             /************************************/
             /* Prepare Communication            */
@@ -490,7 +504,8 @@ void IIC_write_data(void)
                     }
 		}
 	    }
-
+	count_buf_point = ++count_buf[0];
+	count_buf[count_buf_point]=restart_counter;
 
 }
 /***********************************************************************************************************************

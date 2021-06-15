@@ -29,7 +29,7 @@ Global variables and functions
 /* Start user code for global. Do not edit comment generated here */
 
 #define key_value_on_off	760		// OLD 740   790-730
-#define	key_value_mode		200		// OLD 630   170-230
+#define	key_value_mode		190		// OLD 630   170-230
 #define	key_value_down		400		// OLD 383	 370-430
 #define	key_value_up		310		// OLD 293	 280-340
 #define	key_value_clear		650		// OLD 171	 620-680
@@ -1789,6 +1789,9 @@ void production_process(void)
 #if 1		
 		/*************************************************************************/ 
 		case _PRODUCTION_mode_6:
+			COMP_RLY = RESET;
+			PUMP_RLY = RESET;
+			ERROR_RLY = RESET;
 			
 			LED_1_dot = RESET;
 			LED_2_dot = RESET;
@@ -1798,10 +1801,11 @@ void production_process(void)
 			LED_ALARM = RESET;
 			LED_PV = RESET;
 			LED_SV = RESET;
-			HC164_display_arry[0] = seven_seg_code[16];
-			HC164_display_arry[1] = seven_seg_code[16]; 	// display space
-			HC164_display_arry[2] = seven_seg_code[16];
-			HC164_display_arry[3] = seven_seg_code[16];
+			
+			HC164_display_arry[0] = seven_seg_code[17];
+			HC164_display_arry[1] = seven_seg_code[17]; 	// display space
+			HC164_display_arry[2] = seven_seg_code[17];
+			HC164_display_arry[3] = seven_seg_code[17];
 			break;
 #endif						
 		/*************************************************************************/ 
