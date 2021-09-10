@@ -39,7 +39,7 @@ uint16_t	loop_counter;
 MD_STATUS iic_status;                   /* IIC status */
 
 
-uint8_t count_buf_point,count_buf[256];
+uint8_t count_buf_point,count_buf[300];
 
 int8_t	error_count=0;
 uint8_t	IIC_tx_buf[150];

@@ -98,23 +98,22 @@ extern 	flag_t	_dip_switch_data_;
 #define  SWDIP2_2_SET			_dip_switch_data_.bit.no5
 
 /*  ************************************************************* */
-#if 1
-// #define	HEATER_TEMP_PROTECT		P0_bit.no1
-//#define	WATERLEVER_LOW_ALARM	P0_bit.no0
+#if 0		/* old ver 01 sensor define */
 #define	FLOW_SWITCH_PROTECT		P12_bit.no4
-// #define	LP_PROTECT				P14_bit.no0
-// #define	HP_PROTECT				P12_bit.no0
 #define	POWER_PHASE_PROTECT		P14_bit.no1
-
 #define	PUMP_OVERLOAD_PROTECT	P4_bit.no1
 #define	FAN_OVERLOAD_PROTECT	P4_bit.no2
 #define	COMP_OVERLOAD_PROTECT	P4_bit.no3
-// #define	RESERVE_2				P12_bit.no3
-// #define	RESERVE_1				P13_bit.no7
-
-// #define	RESERVE_3				P2_bit.no5		// new
 #define	REMOTE_ON_OFF_SW		P12_bit.no2
-
+#endif
+/*  ************************************************************* */
+#if 1		/* ver 02 sensor define */
+#define	FLOW_SWITCH_PROTECT		P14_bit.no1
+#define	POWER_PHASE_PROTECT		P4_bit.no3
+#define	PUMP_OVERLOAD_PROTECT	P4_bit.no2
+#define	FAN_OVERLOAD_PROTECT	P4_bit.no1
+#define	COMP_OVERLOAD_PROTECT	P12_bit.no4
+#define	REMOTE_ON_OFF_SW		P12_bit.no2
 #endif
 /*  ************************************************************* */
 #define	COMP_RLY		P5_bit.no2
@@ -469,7 +468,7 @@ extern 	flag_t	_current_sys_op_status_;
 
 #define ERROR_RLY_NORMAL 1   /* 1 for normal operation, 0 for error relay not on */
 #define SENSOR_DEBUNSE	20   /* 1 for 0.1 sec */
-#define SW_BASE	10
+#define SW_BASE	02
 #define	ERROR_BACKUP_SET	2	/* 1 for 1 sec */
 #define	STATE_BACKUP_SET	4	/* 1 for 1 sec */
 

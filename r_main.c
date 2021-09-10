@@ -65,7 +65,7 @@ uint8_t	error_code_backup = 0,option_backup = 0x00;
 
 extern 	int8_t	Production_mode_count;
 extern	uint8_t	LED_mode_count,key_repeart_timer;
-
+extern 	uint16_t	loop_counter;
 
 
 uint16_t	get_V_A_timer,V_A_count,current_data_now,current_data_max,current_data_m1,current_data_min,current_key_now;
@@ -135,8 +135,16 @@ void main(void)
 	power_on_timer_reset();
 
 	test_time_1 = ms_counter;
-    IIC_check_init();
+		/* Wait about 10us and restart. */
+	for (loop_counter = 0; loop_counter < LOOP_COUNT_VALUE; loop_counter++)
+	{
+		NOP();
+	}
+    
 	test_time_2 = ms_counter;
+	
+	IIC_check_init();
+	
 	check_dip_switch_setting();
 	check_set_temp_setting();
 
@@ -180,8 +188,11 @@ void main(void)
 /* **************************************************************** */
 		R_WDT_Restart();
 /* **************************************************************** */
-				
-		Check_update_status_IIC();
+
+		if(LED_mode_count != _LED_mode_2)
+		{
+			Check_update_status_IIC();
+		}		
 		check_and_update_IIC_error_record();
 		check_and_update_option();
 		

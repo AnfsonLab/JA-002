@@ -1,2 +1,6 @@
-2021/05/16   V1.0
+2021/08/16   V-01
 1. Start to build the code
+2. first release for mass production
+
+2021/09/10
+1. spec. change rearrange the sensor sequence.
