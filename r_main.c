@@ -147,7 +147,7 @@ void main(void)
 	
 	check_dip_switch_setting();
 	check_set_temp_setting();
-
+	
 	get_V_A_timer = 0;
 	current_data_max = default_0A;
 	current_data_m1 = default_0A;

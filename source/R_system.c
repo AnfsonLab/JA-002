@@ -837,7 +837,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd6;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = SET;
+				ERROR_RLY = RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_high = 1;
@@ -871,7 +871,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd7;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = SET;
+				ERROR_RLY = RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_low = 1;

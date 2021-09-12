@@ -176,9 +176,18 @@ void LED_key_down_operation(void)
 			break;
 		/*************************************************************************/ 
 		case _LED_mode_4:
-			
-			if(--th_no < 1)
-				th_no=3;
+			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
+			{
+				if(th_no==3)
+					th_no=2;
+				if(--th_no < 1)
+					th_no=3;
+			}
+			else
+			{
+				if(--th_no < 1)
+					th_no=3;
+			}
 			flash_flag = 0;
 			flash_count_buf = 0;
 			LED_mode_display();
@@ -314,8 +323,18 @@ void LED_key_up_operation(void)
 			break;
 		/*************************************************************************/ 
 		case _LED_mode_4:
-			if(++th_no > 3)
-				th_no=1;
+			if(TEMP_SELECT_SWITCH == FIX_TYPE_SENSOR)
+			{
+				if(th_no==1)
+					th_no=2;
+				if(++th_no > 3)
+					th_no=1;
+			}
+			else
+			{
+				if(++th_no > 3)
+					th_no=1;
+			}
 			flash_flag = 0;
 			flash_count_buf = 0;
 			LED_mode_display();
