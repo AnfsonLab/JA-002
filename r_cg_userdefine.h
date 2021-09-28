@@ -478,8 +478,8 @@ extern 	flag_t	_current_sys_op_status_;
 #define SW_version     SW_BASE+40
 #endif
 
-
-
+#define ERROR_RLY_SET	SET
+#define ERROR_RLY_RESET	RESET
 
 
 /* End user code. Do not edit comment generated here */

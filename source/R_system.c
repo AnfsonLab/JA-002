@@ -171,7 +171,7 @@ void	comp_protect_operation(void)
 			COMP_RLY = RESET;
 			comp_protect_timer =  (int16_t)eeprom_option_byte[_System_off_COMP_protect_timer_set]*step_10_sec;
 			comp_over_heat = SET;
-			ERROR_RLY = SET;
+			ERROR_RLY = ERROR_RLY_SET;
 			ERROR_CODE =  0xc7;
 		}
 		else
@@ -193,7 +193,7 @@ void	comp_protect_operation(void)
 			if(ERROR_CODE ==  0xc7)
 			{
 				ERROR_CODE =  00;
-				ERROR_RLY = RESET;
+				ERROR_RLY = ERROR_RLY_RESET;
 			}
 			comp_over_heat = RESET;
 		}
@@ -348,8 +348,8 @@ void	system_operation(void)
 	}
 	else     /*****************   system off operation  ****************/
 	{
-		if(ERROR_RLY == SET)
-			ERROR_RLY = RESET;
+		if(ERROR_RLY == ERROR_RLY_SET)
+			ERROR_RLY = ERROR_RLY_RESET;
 		comp_turn_off();
 	}
 	
@@ -430,7 +430,7 @@ void	comp_turn_off(void)
 void	error_system_off(void)
 {
 	COMP_RLY = RESET;
-	ERROR_RLY = SET;
+	ERROR_RLY = ERROR_RLY_SET;
 	error_code_backup = 0Xff;
 	turn_system_off();
 
@@ -446,7 +446,7 @@ void	error_system_off_all(void)
 {
 	COMP_RLY = RESET;
 	PUMP_RLY = RESET;
-	ERROR_RLY = SET;
+	ERROR_RLY = ERROR_RLY_ SET;
 	error_code_backup = 0Xff;
 	turn_system_off();
 
@@ -837,7 +837,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd6;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = RESET;			/* modify for relay not on 2021-09-12 */
+				ERROR_RLY = ERROR_RLY_RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_high = 1;
@@ -850,7 +850,7 @@ void	sensor_operation_continue(void)
 				if ( water_temp_error_flag_high)
 				{
 					water_temp_error_flag_high = 0;
-					ERROR_RLY = RESET;
+					ERROR_RLY = ERROR_RLY_RESET;
 					ERROR_CODE = 0x00;
 				}	
 			}
@@ -871,7 +871,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd7;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = RESET;			/* modify for relay not on 2021-09-12 */
+				ERROR_RLY = ERROR_RLY_RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_low = 1;
@@ -886,7 +886,7 @@ void	sensor_operation_continue(void)
 				{
 					water_temp_error_flag_low = 0;
 					ERROR_CODE = 0x00;
-					ERROR_RLY = RESET;
+					ERROR_RLY = ERROR_RLY_RESET;
 				}
 			}
 		}
@@ -949,7 +949,7 @@ void	sensor_operation_continue(void)
 					comp_protect_timer =  (int16_t)eeprom_option_byte[_System_off_COMP_protect_timer_set]*step_10_sec;
 					PUMP_RLY = RESET;
 					PUMP_DELAY = (int16_t)eeprom_option_byte[_System_off_PUMP_delay]*step_10_sec;
-					ERROR_RLY = SET;
+					ERROR_RLY = ERROR_RLY_SET;
 					FLOW_SWITCH_PROTECT_ON = 1;
 				}
 		}

@@ -1,10 +1,13 @@
-2021/08/16   V-01
+2021/08/16      V-01
 1. Start to build the code
 2. first release for mass production
 
-2021/09/10
-1. spec. change rearrange the sensor sequence.
+2021/09/10       V-02
+1. spec. change rearrange the outside photo sensor sequence.
 
-2021/09/12
+2021/09/12       V-03
 1. modify P06,P07 error relay not to work.
 2. modify for sensor-2 not display when not in operation mode
+
+2021/10/01       V-04
+1. new release for ERROR relay normal on, when error happen off
