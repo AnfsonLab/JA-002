@@ -4,3 +4,7 @@
 
 2021/09/10
 1. spec. change rearrange the sensor sequence.
+
+2021/09/12
+1. modify P06,P07 error relay not to work.
+2. modify for sensor-2 not display when not in operation mode
