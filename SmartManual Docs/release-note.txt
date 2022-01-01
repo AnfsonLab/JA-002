@@ -11,3 +11,9 @@
 
 2021/10/01       V-04
 1. new release for ERROR relay normal on, when error happen off
+
+2021/10/27      V-05
+1. spec. change system off need to turn error relay on R_system.c line 333,334.356
+
+2021/10/27      V-06
+1. 例如當出現E02或其他故障碼時壓縮機及風機停止運轉泵浦繼續運轉，此時若再出現P01或P02或E01時目前機能是泵浦繼續運轉，須改成泵浦不用轉

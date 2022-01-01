@@ -468,7 +468,7 @@ extern 	flag_t	_current_sys_op_status_;
 
 #define ERROR_RLY_NORMAL 1   /* 1 for normal operation, 0 for error relay not on */
 #define SENSOR_DEBUNSE	20   /* 1 for 0.1 sec */
-#define SW_BASE	03
+#define SW_BASE	06
 #define	ERROR_BACKUP_SET	2	/* 1 for 1 sec */
 #define	STATE_BACKUP_SET	4	/* 1 for 1 sec */
 
@@ -478,8 +478,8 @@ extern 	flag_t	_current_sys_op_status_;
 #define SW_version     SW_BASE+40
 #endif
 
-#define ERROR_RLY_SET	SET
-#define ERROR_RLY_RESET	RESET
+#define RLY_ERROR_SET	RESET
+#define RLY_ERROR_RESET	SET
 
 
 /* End user code. Do not edit comment generated here */

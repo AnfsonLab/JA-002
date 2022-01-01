@@ -40,7 +40,7 @@ void	sensor_operation(void);
 void	system_operation(void);
 void	sensor_operation_continue(void);
 void	system_sensor_status(void);
-
+void	check_P01_P02_E01(void);
 extern	uint8_t	state_code_backup_count;
 
 
@@ -171,7 +171,7 @@ void	comp_protect_operation(void)
 			COMP_RLY = RESET;
 			comp_protect_timer =  (int16_t)eeprom_option_byte[_System_off_COMP_protect_timer_set]*step_10_sec;
 			comp_over_heat = SET;
-			ERROR_RLY = ERROR_RLY_SET;
+			ERROR_RLY = RLY_ERROR_SET;
 			ERROR_CODE =  0xc7;
 		}
 		else
@@ -193,7 +193,7 @@ void	comp_protect_operation(void)
 			if(ERROR_CODE ==  0xc7)
 			{
 				ERROR_CODE =  00;
-				ERROR_RLY = ERROR_RLY_RESET;
+				ERROR_RLY = RLY_ERROR_RESET;
 			}
 			comp_over_heat = RESET;
 		}
@@ -230,6 +230,7 @@ void	timer_counter_down(void)
 				sensor_operation_continue();
 				sensor_operation(); 
 			}
+			check_P01_P02_E01();        // add for new spec. v06
 		}
 	}
 #endif
@@ -237,6 +238,8 @@ void	timer_counter_down(void)
 	if( one_sec_counter -- <= 0)
 	{
 		one_sec_counter = 1000;
+
+		
 
 		if((production_mode == RESET) && (LED_mode_count != _LED_mode_option))
 		{
@@ -330,6 +333,8 @@ void	system_operation(void)
 
 	if(current_sys_op_power)     
 	{
+		if(ERROR_CODE == 0)
+			ERROR_RLY = RLY_ERROR_RESET;				// add for version 5
 		if(PUMP_RLY == RESET)
 		{
 			if(PUMP_DELAY  <= 0 )
@@ -348,8 +353,10 @@ void	system_operation(void)
 	}
 	else     /*****************   system off operation  ****************/
 	{
-		if(ERROR_RLY == ERROR_RLY_SET)
-			ERROR_RLY = ERROR_RLY_RESET;
+		//if(ERROR_RLY == RLY_ERROR_SET)
+		//	ERROR_RLY = RLY_ERROR_RESET;
+
+		ERROR_RLY = RLY_ERROR_SET;			// add for version 5
 		comp_turn_off();
 	}
 	
@@ -430,7 +437,7 @@ void	comp_turn_off(void)
 void	error_system_off(void)
 {
 	COMP_RLY = RESET;
-	ERROR_RLY = ERROR_RLY_SET;
+	ERROR_RLY = RLY_ERROR_SET;
 	error_code_backup = 0Xff;
 	turn_system_off();
 
@@ -446,7 +453,7 @@ void	error_system_off_all(void)
 {
 	COMP_RLY = RESET;
 	PUMP_RLY = RESET;
-	ERROR_RLY = ERROR_RLY_ SET;
+	ERROR_RLY = RLY_ERROR_SET;
 	error_code_backup = 0Xff;
 	turn_system_off();
 
@@ -837,7 +844,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd6;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = ERROR_RLY_RESET;			/* modify for relay not on 2021-09-12 */
+				ERROR_RLY = RLY_ERROR_RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_high = 1;
@@ -850,7 +857,7 @@ void	sensor_operation_continue(void)
 				if ( water_temp_error_flag_high)
 				{
 					water_temp_error_flag_high = 0;
-					ERROR_RLY = ERROR_RLY_RESET;
+					ERROR_RLY = RLY_ERROR_RESET;
 					ERROR_CODE = 0x00;
 				}	
 			}
@@ -871,7 +878,7 @@ void	sensor_operation_continue(void)
 					error_code_backup = 0Xff;
 				ERROR_CODE = 0xd7;
 #if ERROR_RLY_NORMAL				
-				ERROR_RLY = ERROR_RLY_RESET;			/* modify for relay not on 2021-09-12 */
+				ERROR_RLY = RLY_ERROR_RESET;			/* modify for relay not on 2021-09-12 */
 #endif
 				// PMV_close();				// modify for V13 bug 
 				water_temp_error_flag_low = 1;
@@ -886,7 +893,7 @@ void	sensor_operation_continue(void)
 				{
 					water_temp_error_flag_low = 0;
 					ERROR_CODE = 0x00;
-					ERROR_RLY = ERROR_RLY_RESET;
+					ERROR_RLY = RLY_ERROR_RESET;
 				}
 			}
 		}
@@ -949,7 +956,7 @@ void	sensor_operation_continue(void)
 					comp_protect_timer =  (int16_t)eeprom_option_byte[_System_off_COMP_protect_timer_set]*step_10_sec;
 					PUMP_RLY = RESET;
 					PUMP_DELAY = (int16_t)eeprom_option_byte[_System_off_PUMP_delay]*step_10_sec;
-					ERROR_RLY = ERROR_RLY_SET;
+					ERROR_RLY = RLY_ERROR_SET;
 					FLOW_SWITCH_PROTECT_ON = 1;
 				}
 		}
@@ -967,7 +974,7 @@ void	sensor_operation_continue(void)
 			{
 				if(PUMP_on_count >= 10)
 				{
-					ERROR_RLY = RESET;
+					ERROR_RLY = RLY_ERROR_RESET;
 					ERROR_CODE =  00;
 					FLOW_SWITCH_PROTECT_ON = 0;
 				}	
@@ -1005,10 +1012,65 @@ void	clear_flag_for_sensor_continue(void)
 	FLOW_SWITCH_PROTECT_ON = 0;
 	comp_over_heat = RESET;
 	ERROR_CODE = 0x00;
-	ERROR_RLY = RESET;
+	ERROR_RLY = RLY_ERROR_RESET;
 }
 
+/*******************************************************************************
+* Function name : check_P01_P02_E01
+* Description	: none
+* Argument	: none
+* Return value	: none
+*******************************************************************************/
+void	check_P01_P02_E01(void)
+{
+		/*****************	 FLOW switch  operation  after 10 sec check for hold 0 - 40 s ****************/
+#if 1
+	if((ERROR_CODE != 00) && (ERROR_CODE != 0xd8) && (ERROR_CODE != 0xd2) && (ERROR_CODE != 0xe1) && (ERROR_CODE != 0xd1))
+	{
+		if(FLOW_SWITCH_PROTECT == 0)
+			FLOW_SWITCH_PROTECT_DELAY = 0;
+		else
+			if(FLOW_SWITCH_PROTECT_DELAY++ >= SENSOR_DEBUNSE)
+			{
+				FLOW_SWITCH_PROTECT_DELAY  = SENSOR_DEBUNSE;
+				ERROR_CODE = 0xd8;
+				error_system_off_all();
+			}
+//	}
+	
+	/*****************	 FLOW switch  operation  ****************/
+#endif
 
+	/*****************   PUMP overload  operation  check for hold 0.1sec ****************/
+	//if((ERROR_CODE != 00) && (ERROR_CODE != 0xd2)) 
+	//{
+		if(PUMP_OVERLOAD_PROTECT == 0)
+			PUMP_OVERLOAD_PROTECT_DELAY = 0;
+		else
+			if(PUMP_OVERLOAD_PROTECT_DELAY++  >= SENSOR_DEBUNSE)     /* old 1*/
+			{
+				PUMP_OVERLOAD_PROTECT_DELAY  =SENSOR_DEBUNSE;
+				ERROR_CODE = 0xd2;
+				error_system_off_all();
+			}
+	//}
+	/*****************   PUMP overload    operation  ****************/
+
+	/*****************   POWER_PHASE_PROTECT operation  ****************/
+	//if((ERROR_CODE != 00) && (ERROR_CODE != 0xe1)) 
+	//{
+		if(POWER_PHASE_PROTECT == 0)
+			POWER_PHASE_PROTECT_DELAY= 0;
+		else
+			if(POWER_PHASE_PROTECT_DELAY++ >= SENSOR_DEBUNSE)		/* old 1*/
+			{
+				POWER_PHASE_PROTECT_DELAY= SENSOR_DEBUNSE;
+				ERROR_CODE = 0xe1;
+				error_system_off_all();
+			}
+	}
+	/*****************   POWER_PHASE_PROTECT operation  ****************/
+}
 
 
 	

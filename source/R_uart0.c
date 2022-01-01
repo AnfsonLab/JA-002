@@ -180,7 +180,7 @@ void	UART0_recieve_action(void)
 					UART0_TxBuff[Tx_Pointer]= UART0_TxBuff[Tx_Pointer] | 0x01;
 				if(PUMP_RLY == SET)
 					UART0_TxBuff[Tx_Pointer]= UART0_TxBuff[Tx_Pointer] | 0x04;
-				if(ERROR_RLY == ERROR_RLY_SET)
+				if(ERROR_RLY == RLY_ERROR_SET)
 					UART0_TxBuff[Tx_Pointer]= UART0_TxBuff[Tx_Pointer] | 0x08;	
 				Tx_Pointer++;
 				/* *************** 030BH *********************** */ /* set for switch setting */
